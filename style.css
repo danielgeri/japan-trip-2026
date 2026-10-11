@@ -1043,6 +1043,45 @@ body {
   margin-bottom: 14px;
 }
 
+/* In-Flight Sleep Strategy Section */
+.sleep-strategies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.sleep-strat-item {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.sleep-strat-item h4 {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.sleep-strat-item p {
+  font-size: 0.84rem;
+  color: #334155;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+
+.sleep-strat-item ul {
+  padding-left: 18px;
+  font-size: 0.84rem;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
 /* Footer */
 .app-footer {
   text-align: center;
