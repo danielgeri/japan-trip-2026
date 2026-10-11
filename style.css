@@ -652,6 +652,397 @@ body {
   color: #475569;
 }
 
+/* ==================== WEATHER & TWO-CLIMATE PACKING ==================== */
+.weather-alert-banner {
+  background: linear-gradient(135deg, #fef3c7 0%, #fee2e2 100%);
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.alert-text {
+  font-size: 0.88rem;
+  color: #78350f;
+  line-height: 1.45;
+}
+
+.alert-text strong {
+  color: #92400e;
+}
+
+.weather-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .weather-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.weather-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.weather-card.hokkaido-weather {
+  border-top: 4px solid #0284c7;
+}
+
+.weather-card.kansai-weather {
+  border-top: 4px solid #d97706;
+}
+
+.weather-card.kanto-weather {
+  border-top: 4px solid #059669;
+}
+
+.weather-city-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.weather-city-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.weather-city-header h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.weather-condition-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.weather-condition-tag.cold {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.weather-condition-tag.mild {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.weather-condition-tag.beach {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.temp-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.temp-box {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.temp-box.high .temp-val {
+  color: #dc2626;
+}
+
+.temp-box.low .temp-val {
+  color: #0284c7;
+}
+
+.temp-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.temp-val {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.temp-f {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.weather-desc {
+  font-size: 0.84rem;
+  color: #334155;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.weather-packing-rules {
+  background: #f8fafc;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.8rem;
+}
+
+.weather-packing-rules strong {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.weather-packing-rules ul {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #1e293b;
+}
+
+/* 3-Layer System Visual */
+.layer-system-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.layer-system-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.layer-subtitle {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  margin-bottom: 16px;
+}
+
+.layer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .layer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.layer-item {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.layer-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.layer-tag.l1 { background: #dbeafe; color: #1e40af; }
+.layer-tag.l2 { background: #fef3c7; color: #92400e; }
+.layer-tag.l3 { background: #fee2e2; color: #991b1b; }
+
+.layer-item h4 {
+  font-size: 0.94rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.layer-item p {
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+/* Clothing Packing Lists by Traveler */
+.clothing-breakdown-section {
+  margin-bottom: 20px;
+}
+
+.clothing-breakdown-section h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.traveler-clothes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .traveler-clothes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.traveler-clothes-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.traveler-clothes-card.highlight-card {
+  border-color: #f43f5e;
+  background: #fffafb;
+}
+
+.traveler-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.traveler-emoji {
+  font-size: 1.6rem;
+}
+
+.traveler-title h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.clothes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #334155;
+}
+
+.clothes-list li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.clothes-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.clothes-list strong {
+  color: #0f172a;
+}
+
+/* ==================== 4-PHASE CHRONOLOGICAL CHECKLIST ==================== */
+.phase-box {
+  border-left: 4px solid var(--primary);
+}
+
+.phase-header-badge {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.phase-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  color: white;
+}
+
+.phase-pill.p1 { background: #6366f1; }
+.phase-pill.p2 { background: #0284c7; }
+.phase-pill.p3 { background: #d97706; }
+.phase-pill.p4 { background: #e11d48; }
+
+.phase-timeline {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.phase-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.phase-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
 /* Footer */
 .app-footer {
   text-align: center;

@@ -32,17 +32,17 @@
     <!-- Navigation Tabs -->
     <nav class="tab-nav">
       <button class="nav-tab active" data-tab="itinerary">📅 Itinerary</button>
+      <button class="nav-tab" data-tab="weather">🌤️ Weather & Clothes</button>
+      <button class="nav-tab" data-tab="flight-kit">✅ Pre-Flight Checklist</button>
       <button class="nav-tab" data-tab="bookings">✈️ Bookings</button>
-      <button class="nav-tab" data-tab="flight-kit">🎒 Flight Kit</button>
-      <button class="nav-tab" data-tab="shopping">🛍️ Snacks & Gifts</button>
       <button class="nav-tab" data-tab="family-guide">👶 Maria & Kayden</button>
+      <button class="nav-tab" data-tab="shopping">🛍️ Snacks & Gifts</button>
       <button class="nav-tab" data-tab="reservations">🍽️ Reservations</button>
     </nav>
   </header>
 
   <main class="main-content">
 
-    <!-- ==================== TAB 1: ITINERARY ==================== -->
     <section id="tab-itinerary" class="tab-pane active">
       <!-- Day Filter Pills -->
       <div class="day-filter-scroll">
@@ -66,7 +66,423 @@
       </div>
     </section>
 
-    <!-- ==================== TAB 2: BOOKINGS & FLIGHTS ==================== -->
+    <section id="tab-weather" class="tab-pane">
+      <div class="pane-header">
+        <h2>🌤️ Late October Weather & Two-Climate Packing</h2>
+        <p>Hokkaido early chill vs. Kansai & Kanto mild golden autumn: Real forecasts and the modular 3-layer system.</p>
+      </div>
+
+      <!-- Quick Summary Alert -->
+      <div class="weather-alert-banner">
+        <div class="alert-icon">💡</div>
+        <div class="alert-text">
+          <strong>The "Two-Climate" Secret:</strong> Sapporo feels like brisk early winter (4°C–14°C), while Kyoto and Kamakura are mild autumn (18°C–23°C). <em>Don't pack bulky winter parkas!</em> Instead, pack a <strong>Modular 3-Layer System</strong> (Heattech base + fleece/cardigan + ultra-light packable down) that easily rolls up when moving south.
+        </div>
+      </div>
+
+      <!-- Weather Forecast Cards -->
+      <div class="weather-cards-grid">
+        <!-- Sapporo Card -->
+        <div class="weather-card hokkaido-weather">
+          <div class="weather-city-badge">Hokkaido • Oct 17 – 21</div>
+          <div class="weather-city-header">
+            <h3>Sapporo & Otaru</h3>
+            <span class="weather-condition-tag cold">❄️ Crisp Early Winter</span>
+          </div>
+          <div class="temp-display">
+            <div class="temp-box high">
+              <span class="temp-label">Day High</span>
+              <span class="temp-val">11°C – 15°C</span>
+              <span class="temp-f">(52°F – 59°F)</span>
+            </div>
+            <div class="temp-box low">
+              <span class="temp-label">Night Low</span>
+              <span class="temp-val">4°C – 8°C</span>
+              <span class="temp-f">(39°F – 46°F)</span>
+            </div>
+          </div>
+          <p class="weather-desc">Crisp northern winds, frosty mornings, and brisk nights. Mountain peaks nearby may see early flurries. Feels like November in Chicago or foggy winter in SF.</p>
+          <div class="weather-packing-rules">
+            <strong>Must-Packs:</strong>
+            <ul>
+              <li>Uniqlo Heattech thermal base layers (tops & bottoms)</li>
+              <li>Fleece zip-up or wool sweater + Packable Down Coat</li>
+              <li>Warm knit beanie covering ears + toddler stroller blanket</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kyoto Card -->
+        <div class="weather-card kansai-weather">
+          <div class="weather-city-badge">Kansai • Oct 21 – 24</div>
+          <div class="weather-city-header">
+            <h3>Kyoto & Arashiyama</h3>
+            <span class="weather-condition-tag mild">🍁 Mild Golden Autumn</span>
+          </div>
+          <div class="temp-display">
+            <div class="temp-box high">
+              <span class="temp-label">Day High</span>
+              <span class="temp-val">18°C – 22°C</span>
+              <span class="temp-f">(64°F – 72°F)</span>
+            </div>
+            <div class="temp-box low">
+              <span class="temp-label">Night Low</span>
+              <span class="temp-val">9°C – 13°C</span>
+              <span class="temp-f">(48°F – 55°F)</span>
+            </div>
+          </div>
+          <p class="weather-desc">Clear, sunny skies, low humidity, and pleasant autumn breezes. Perfect walking weather for temples and gardens. Cooler mornings and evenings.</p>
+          <div class="weather-packing-rules">
+            <strong>Must-Packs:</strong>
+            <ul>
+              <li>Daytime: Breathable long-sleeve shirts or light knits</li>
+              <li>Evenings: Medium cardigan, light jacket, or trench coat</li>
+              <li>Supportive, cushioned walking shoes (15,000+ steps/day)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kamakura Card -->
+        <div class="weather-card kanto-weather">
+          <div class="weather-city-badge">Shonan Coast • Oct 24 – 27</div>
+          <div class="weather-city-header">
+            <h3>Kamakura & Tokyo</h3>
+            <span class="weather-condition-tag beach">🌊 Mild Coastal Autumn</span>
+          </div>
+          <div class="temp-display">
+            <div class="temp-box high">
+              <span class="temp-label">Day High</span>
+              <span class="temp-val">18°C – 23°C</span>
+              <span class="temp-f">(64°F – 73°F)</span>
+            </div>
+            <div class="temp-box low">
+              <span class="temp-label">Night Low</span>
+              <span class="temp-val">12°C – 16°C</span>
+              <span class="temp-f">(54°F – 61°F)</span>
+            </div>
+          </div>
+          <p class="weather-desc">Comfortable coastal maritime climate. Sunny daytime strolls along Komachi-dori and mild ocean breezes near Yuigahama beach.</p>
+          <div class="weather-packing-rules">
+            <strong>Must-Packs:</strong>
+            <ul>
+              <li>Light layers: Tees, casual shirts, and comfortable chinos</li>
+              <li>Light windbreaker or hoodie for breezy beach strolls</li>
+              <li>Slip-on shoes for frequent shoe removal at temples & ryokan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- The 3-Layer System Visual Section -->
+      <div class="layer-system-card">
+        <h3>🧥 The Modular 3-Layer Strategy</h3>
+        <p class="layer-subtitle">Mix and match to adapt to any temperature without suitcase clutter:</p>
+        <div class="layer-grid">
+          <div class="layer-item">
+            <div class="layer-tag l1">Layer 1: Base</div>
+            <h4>Thermal & Moisture</h4>
+            <p><strong>Sapporo:</strong> Uniqlo Heattech (regular or extra warm) tops & leggings.</p>
+            <p><strong>Kyoto/Kamakura:</strong> Soft breathable cotton tees or long-sleeves.</p>
+          </div>
+          <div class="layer-item">
+            <div class="layer-tag l2">Layer 2: Mid-Layer</div>
+            <h4>Insulation</h4>
+            <p>Fleece full-zip, soft knit cardigan, or merino wool sweater.</p>
+            <p><em>Worn as outer jacket in Kyoto; worn under coat in Sapporo.</em></p>
+          </div>
+          <div class="layer-item">
+            <div class="layer-tag l3">Layer 3: Outer Shell</div>
+            <h4>Wind & Cold Barrier</h4>
+            <p>Ultra-Light Packable Down jacket (rolls into a fist-sized pouch) or water-resistant windbreaker.</p>
+            <p><em>Compresses away to zero luggage volume when moving south!</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Clothes Packing List by Traveler -->
+      <div class="clothing-breakdown-section">
+        <h3>🎒 Exact Clothing Packing Checklist</h3>
+        <div class="traveler-clothes-grid">
+          <!-- Kayden (Toddler) -->
+          <div class="traveler-clothes-card">
+            <div class="traveler-title">
+              <span class="traveler-emoji">👶</span>
+              <h4>Kayden (26 Months)</h4>
+            </div>
+            <ul class="clothes-list">
+              <li><strong>Tops:</strong> 4–5 long-sleeve cotton shirts / bodysuits (breathable layers)</li>
+              <li><strong>Pants:</strong> 4 pairs stretchy jogger pants (soft elastic waist for diaper access)</li>
+              <li><strong>Warm Mid-Layer:</strong> 1 fleece zip hoodie or cozy sweater</li>
+              <li><strong>Puffer:</strong> 1 lightweight toddler packable down jacket</li>
+              <li><strong>Beanie:</strong> 1 warm knit beanie covering ears (for Sapporo evenings)</li>
+              <li><strong>🚨 Stroller Blanket (Crucial):</strong> 1 warm fleece stroller blanket or bunting bag (*toddlers sit motionless and lose body heat much faster than walking adults!*)</li>
+              <li><strong>Stroller Weather Cover:</strong> 1 transparent rain & wind cover</li>
+              <li><strong>Feet:</strong> 5–6 pairs warm socks + 2 pairs broken-in sneakers (1 backup for puddles)</li>
+              <li><strong>Pajamas:</strong> 2–3 cozy 2-piece pajama sets</li>
+            </ul>
+          </div>
+
+          <!-- Maria (Maternity) -->
+          <div class="traveler-clothes-card highlight-card">
+            <div class="traveler-title">
+              <span class="traveler-emoji">🤰</span>
+              <h4>Maria (5 Months Pregnant)</h4>
+            </div>
+            <ul class="clothes-list">
+              <li><strong>Bottoms:</strong> 2–3 pairs over-the-belly stretchy maternity leggings / joggers</li>
+              <li><strong>Tops:</strong> 3–4 comfortable, breathable long-sleeve maternity tops / tunics</li>
+              <li><strong>Thermals:</strong> 1–2 stretchy Heattech long-sleeve tops for Sapporo</li>
+              <li><strong>Cardigan:</strong> 1 soft open knit cardigan / wrap (easy on/off for heated trains)</li>
+              <li><strong>Outerwear:</strong> 1 lightweight packable down coat with belly room</li>
+              <li><strong>🚨 Compression Socks (Must-Pack):</strong> 2–3 pairs graduated compression socks (*wear during all 3 flights to prevent leg swelling & DVT*)</li>
+              <li><strong>Footwear:</strong> 1 pair cushioned, supportive slip-on walking sneakers (feet swell during pregnancy)</li>
+              <li><strong>Support:</strong> Maternity belly band for long temple walks in Kiyomizu-dera</li>
+            </ul>
+          </div>
+
+          <!-- Adults (Daniel, Kumi, James) -->
+          <div class="traveler-clothes-card">
+            <div class="traveler-title">
+              <span class="traveler-emoji">👨‍👩‍👦</span>
+              <h4>Daniel, Kumi & James</h4>
+            </div>
+            <ul class="clothes-list">
+              <li><strong>Tops:</strong> 3–4 long-sleeve shirts + 2–3 breathable short-sleeve tees</li>
+              <li><strong>Pants:</strong> 2 pairs comfortable walking trousers, chinos, or stretch jeans</li>
+              <li><strong>Mid-Layer:</strong> 1 warm fleece jacket or merino wool sweater</li>
+              <li><strong>Outerwear:</strong> 1 Ultra-Light Packable Down jacket (rolls into pouch)</li>
+              <li><strong>Base Layers:</strong> 1–2 sets Uniqlo Heattech tops & bottoms for Sapporo</li>
+              <li><strong>Footwear:</strong> 1 pair broken-in supportive walking shoes (wear on plane!)</li>
+              <li><strong>Rain Shell:</strong> 1 compact travel umbrella or lightweight rain jacket</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-flight-kit" class="tab-pane">
+      <div class="pane-header">
+        <h2>✅ Pre-Flight Chronological Checklist</h2>
+        <p>Follow this exact 4-phase countdown leading up to takeoff. Checkmarks save automatically to your phone!</p>
+      </div>
+
+      <!-- Phase 1 -->
+      <div class="checklist-section phase-box">
+        <div class="phase-header-badge">
+          <span class="phase-pill p1">Phase 1</span>
+          <span class="phase-timeline">📅 5 to 3 Days Before Departure (Today – Oct 13)</span>
+        </div>
+        <h3 class="phase-title">Tech, Bookings & Digital Administration</h3>
+        <p class="phase-desc">Complete all digital setups and verification at home while on high-speed Wi-Fi.</p>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-vjw">
+            <label for="chk-vjw">
+              <strong>Visit Japan Web QR Codes:</strong> Register all 5 travelers at <a href="https://vjw-lp.digital.go.jp/" target="_blank">vjw-lp.digital.go.jp</a>. Complete Immigration & Customs declarations and <em>screenshot QR codes to your camera roll</em> for offline use.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-suica">
+            <label for="chk-suica">
+              <strong>Suica / Pasmo in Apple Wallet:</strong> Add digital Suica or Pasmo to Apple Wallet on Daniel, Maria, Kumi, and James's iPhones. Load funds using Mastercard or Amex (Visa is often blocked). <em>Kayden (under 6) rides completely free!</em>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-smartex">
+            <label for="chk-smartex">
+              <strong>SmartEX Nozomi #116 Shinkansen Reservation:</strong> Download SmartEX app and reserve 5 seats on Nozomi #116 (Sat, Oct 24, 11:05 AM Kyoto ➔ Shin-Yokohama) in the last row for oversized luggage area.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-esim">
+            <label for="chk-esim">
+              <strong>Install eSIM Profiles (Ubigi / Airalo):</strong> Purchase and install Japan data eSIM profiles in the US so data connects automatically when your phone leaves airplane mode at Haneda.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-ipad-test">
+            <label for="chk-ipad-test">
+              <strong>The "Couch Airplane Mode" iPad Test:</strong> Download movies, shows, and games on Disney+, Netflix, and YouTube Kids, then <em>switch off Wi-Fi entirely while sitting on your couch</em> to ensure offline playback works without DRM license blocks.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-credit-cards">
+            <label for="chk-credit-cards">
+              <strong>Credit Card International Travel Alerts:</strong> Notify Chase and American Express of travel dates to Japan so international charges aren't flagged as fraudulent.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-headphone-dongle">
+            <label for="chk-headphone-dongle">
+              <strong>Headphone Dongles & Adapters:</strong> Pack Lightning/USB-C to 3.5mm headphone dongle + airline 2-prong adapter for Kayden's 85dB volume-limited headphones.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="checklist-section phase-box">
+        <div class="phase-header-badge">
+          <span class="phase-pill p2">Phase 2</span>
+          <span class="phase-timeline">📅 2 Days Before Departure (Wednesday, Oct 14)</span>
+        </div>
+        <h3 class="phase-title">Master Luggage Packing (Two-Climate Ready)</h3>
+        <p class="phase-desc">Pack checked suitcases using the Modular 3-Layer System and prepare for Hokkaido chill.</p>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-pack-layers">
+            <label for="chk-pack-layers">
+              <strong>Pack Modular 3-Layer System:</strong> Pack Uniqlo Heattech base layers + fleece mid-layers + packable down jackets into checked bags for all travelers.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-pack-kayden-stroller">
+            <label for="chk-pack-kayden-stroller">
+              <strong>Kayden's Stroller Weather Kit:</strong> Pack warm knit beanie hat, plush fleece stroller blanket, and clear rain/wind shield into your luggage.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-pack-maria-maternity">
+            <label for="chk-pack-maria-maternity">
+              <strong>Maria's Maternity Travel Kit:</strong> Pack graduated compression socks, supportive walking sneakers, prenatal vitamins, and belly support band.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-pack-forwarding-duffle">
+            <label for="chk-pack-forwarding-duffle">
+              <strong>Stage 2-Day Duffle Bag:</strong> Stage a compact 2-day carry-on duffle bag for Oct 20–22 (when large bags are forwarded from Sapporo to Kyoto via Yamato Takkyubin luggage delivery).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-pack-bos">
+            <label for="chk-pack-bos">
+              <strong>BOS Odor-Sealing Diaper Bags:</strong> Pack 1 box of BOS bags into checked luggage for sealing dirty diapers in hotel rooms and public transit.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-pack-diaper-supply">
+            <label for="chk-pack-diaper-supply">
+              <strong>Diaper Math & Staging:</strong> Pack 10–12 diapers into carry-on backpack + 1 bulk pack in checked suitcase (or plan to replenish at Akachan Honpo Sapporo on Day 4).
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="checklist-section phase-box">
+        <div class="phase-header-badge">
+          <span class="phase-pill p3">Phase 3</span>
+          <span class="phase-timeline">📅 24 Hours Before Departure (Thursday, Oct 15)</span>
+        </div>
+        <h3 class="phase-title">Carry-On Staging & Toddler Flight Survival</h3>
+        <p class="phase-desc">Everything that goes into the cabin for the 11-hour flight across the Pacific.</p>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-diaper-clutch">
+            <label for="chk-diaper-clutch">
+              <strong>1-Gallon Ziploc Diaper Clutch:</strong> Pack 2 diapers, travel wipes, disposable changing pad, and 2 BOS bags in a 1-gallon Ziploc kept in the seatback pocket (never haul heavy backpacks to the tiny airplane lavatory!).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-emergency-clothes">
+            <label for="chk-toddler-emergency-clothes">
+              <strong>2 Toddler Emergency Outfits in Ziplocs:</strong> Pack 2 complete changes of clothes (shirt, pants, socks) for Kayden in separate gallon Ziploc bags (also serves as wet-bag if accidents happen).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-emergency-shirts">
+            <label for="chk-adult-emergency-shirts">
+              <strong>Adult Emergency Shirts:</strong> Pack 1 clean shirt for Daniel and 1 for Maria in your carry-on personal item in case of juice/milk spills or motion sickness.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-gift-wrap-toys">
+            <label for="chk-gift-wrap-toys">
+              <strong>"Gift Wrap" Novelty Toys Staged:</strong> Wrap 5–6 small novelty toys (Water Wow water pen books, gel window clings, mini cars, LCD drawing tablet) in foil/wrapping paper. Hand out one every 90–120 minutes during the flight!
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-snack-spinner">
+            <label for="chk-toddler-snack-spinner">
+              <strong>Toddler Snack Spinner & Treats:</strong> Pre-load GoBe snack spinner / silicone containers with toddler favorites (puffs, cheerios, goldfish, pretzel sticks, fruit gummies).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-ear-descent">
+            <label for="chk-ear-descent">
+              <strong>Descent Ear Pressure Protocol:</strong> Keep a Dum Dums lollipop, pouch, or straw cup within reach for the final 30–40 min descent into Tokyo (swallowing relieves ear pain).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-meds-tylenol">
+            <label for="chk-meds-tylenol">
+              <strong>Children's Liquid Tylenol & Syringe:</strong> Pack in carry-on alongside adult meds (original prescription bottles).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-power-bank">
+            <label for="chk-power-bank">
+              <strong>Power Banks in Cabin Bag:</strong> Ensure all portable power banks (<100Wh) and charging cables are in carry-on bags (prohibited in checked luggage).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-southwest-kumi-james">
+            <label for="chk-southwest-kumi-james">
+              <strong>Kumi & James Fly to SFO (8:55 PM):</strong> Southwest Flight WN 384 LAX ➔ SFO. Arrives 10:15 PM, takes free shuttle to Hotel 1550 SFO Airport.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="checklist-section phase-box">
+        <div class="phase-header-badge">
+          <span class="phase-pill p4">Phase 4</span>
+          <span class="phase-timeline">📅 Flight Morning (Friday, Oct 16)</span>
+        </div>
+        <h3 class="phase-title">Departure Protocol & Airport Tactics</h3>
+        <p class="phase-desc">Step-by-step game plan from arriving at SFO through boarding ANA Flight NH 7011.</p>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-maria-compression">
+            <label for="chk-maria-compression">
+              <strong>Put Compression Socks on Maria:</strong> Put on graduated compression socks at home before departing for SFO.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-sfo-rendezvous">
+            <label for="chk-sfo-rendezvous">
+              <strong>SFO International Terminal Meeting (7:30 AM):</strong> All 5 travelers meet at SFO International Terminal, Aisle 8 (ANA / UA Check-In) 3 hours prior to 10:35 AM departure.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-gate-check-stroller">
+            <label for="chk-gate-check-stroller">
+              <strong>Gate-Check Stroller:</strong> Wheel Kayden directly through security to the gate; request a gate-check claim tag at the boarding podium.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-split-boarding">
+            <label for="chk-split-boarding">
+              <strong>Execute Split Boarding Strategy:</strong> Send Daniel & James ahead during pre-boarding to secure overhead bin space for heavy carry-ons. Maria & Kayden roam the gate until final boarding call to burn toddler energy!
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-sanitizing-wipes">
+            <label for="chk-sanitizing-wipes">
+              <strong>Aircraft Seat Sanitation:</strong> Immediately wipe down seatbelt buckles, tray tables, armrests, and TV screens with disinfectant wipes.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-gate-stroller-haneda">
+            <label for="chk-gate-stroller-haneda">
+              <strong>Collect Stroller at Haneda Jetbridge:</strong> Pick up gate-checked stroller immediately upon exiting plane at Tokyo Haneda Terminal 3 for easy transit through customs!
+            </label>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section id="tab-bookings" class="tab-pane">
       <div class="pane-header">
         <h2>Master Booking & Flight Ledger</h2>
@@ -216,129 +632,70 @@
       </div>
     </section>
 
-    <!-- ==================== TAB 3: FLIGHT SURVIVAL & CHECKLISTS ==================== -->
-    <section id="tab-flight-kit" class="tab-pane">
+    <section id="tab-family-guide" class="tab-pane">
       <div class="pane-header">
-        <h2>Flight Survival & Packing Checklist</h2>
-        <p>Check off items as you pack. Progress automatically saves on your phone!</p>
+        <h2>Maria (5 Mo Pregnant) & Kayden (26 Mo) Guide</h2>
+        <p>Essential local tips, Japanese phrase cards, and transit conveniences.</p>
       </div>
 
-      <div class="checklist-section">
-        <h3>🚨 Top 5 In-Flight Game-Changers (Kayden & Maria)</h3>
-        <ul class="interactive-checklist">
-          <li>
-            <input type="checkbox" id="chk-ipad">
-            <label for="chk-ipad">
-              <strong>Test iPad in Airplane Mode on Couch:</strong> Download Netflix, Disney+, and YouTube Kids, then turn on Airplane Mode at home to ensure offline playback works without license errors.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-headphone-dongle">
-            <label for="chk-headphone-dongle">
-              <strong>Headphone Dongles & Adapters:</strong> Pack Lightning/USB-C to 3.5mm dongle + airline 2-prong adapter for Kayden's 85dB volume-limited headphones.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-gift-wrap">
-            <label for="chk-gift-wrap">
-              <strong>The "Gift Wrap" Toy Trick:</strong> Wrap 5–6 small novelty toys (Water Wow, gel window clings, LCD drawing tablet) in foil/wrapping paper. Hand out one every 1.5–2 hours to reset toddler meltdowns.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-ear-lollipop">
-            <label for="chk-ear-lollipop">
-              <strong>Descent Ear Pressure Protocol:</strong> Keep a Dum Dums lollipop, pouch, or straw cup in hand for the final 30–40 min descent into Tokyo/SFO. Swallowing forces Eustachian tubes open.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-adult-shirt">
-            <label for="chk-adult-shirt">
-              <strong>Extra Shirt for Daniel & Maria:</strong> Pack 1 clean shirt for each adult in carry-on bag (in case of milk/juice spills or airsickness).
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-split-boarding">
-            <label for="chk-split-boarding">
-              <strong>Split Boarding Strategy:</strong> Send Daniel & James ahead with heavy bags during family boarding to claim overhead space. Keep Maria & Kayden running around the gate until the very last boarding group!
-            </label>
-          </li>
-        </ul>
-      </div>
+      <div class="guide-grid">
+        <!-- Card 1: Maternity Mark -->
+        <div class="guide-card highlight">
+          <div class="card-icon">🤰</div>
+          <h3>Pick Up the "Maternity Mark" (Day 1)</h3>
+          <p>Japan’s Ministry of Health provides a pink circular badge that commuters and conductors treat with immense respect.</p>
+          <p><strong>Where to get it free:</strong> At Haneda Airport station or Sapporo Station ticket booth, show this phrase:</p>
+          <div class="japanese-phrase-box">
+            <p class="jp-text">妊婦です。マタニティマークをください。</p>
+            <p class="romaji">"Ninpu desu. Mataniti maaku o kudasai."</p>
+            <p class="en-translation">("I am pregnant. Please give me a maternity mark.")</p>
+          </div>
+        </div>
 
-      <div class="checklist-section">
-        <h3>🧳 Pre-Departure Setup (3–5 Days Before Oct 16)</h3>
-        <ul class="interactive-checklist">
-          <li>
-            <input type="checkbox" id="chk-vjw">
-            <label for="chk-vjw">
-              <strong>Visit Japan Web QR Codes:</strong> Register all 5 travelers at <a href="https://vjw-lp.digital.go.jp/" target="_blank">vjw-lp.digital.go.jp</a> and screenshot QR codes offline.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-suica">
-            <label for="chk-suica">
-              <strong>Suica / Pasmo in Apple Wallet:</strong> Add to Apple Wallet on iPhones (load using Mastercard or Amex). Kayden rides completely free!
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-smartex">
-            <label for="chk-smartex">
-              <strong>SmartEX Shinkansen Booking:</strong> Reserve 5 seats on Nozomi #116 (Oct 24, 11:05 AM) in the rear row for oversized luggage.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-esim">
-            <label for="chk-esim">
-              <strong>eSIM Installed (Ubigi / Airalo):</strong> Install eSIM profiles in the US before flying.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-compression-socks">
-            <label for="chk-compression-socks">
-              <strong>Compression Socks for Maria:</strong> Wear during the 11h 20m flight to prevent ankle swelling and DVT.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-bos-bags">
-            <label for="chk-bos-bags">
-              <strong>BOS Odor-Sealing Diaper Bags:</strong> Pack a box for sealing dirty diapers on planes and hotels.
-            </label>
-          </li>
-        </ul>
-      </div>
+        <!-- Card 2: Food & Drinks -->
+        <div class="guide-card">
+          <div class="card-icon">🍵</div>
+          <h3>Caffeine-Free Drinks & Food Safety</h3>
+          <ul>
+            <li><strong>Caffeine-Free in All Vending Machines:</strong> Look for <strong>Mugi-cha (麦茶 - Roasted Barley Tea)</strong> and <strong>Rooibos Tea</strong>. Both are completely non-caffeinated and refreshing.</li>
+            <li><strong>Well-Done Eggs Card:</strong> Sukiyaki and beef bowls often come with raw egg. Show this to your server:</li>
+          </ul>
+          <div class="japanese-phrase-box">
+            <p class="jp-text">卵はよく火を通してください。</p>
+            <p class="romaji">"Tamago wa yoku hi o tooshite kudasai."</p>
+            <p class="en-translation">("Please cook the egg thoroughly.")</p>
+          </div>
+          <ul>
+            <li><strong>Cooked Sushi Alternatives:</strong> Order <em>Unagi</em> (grilled eel), <em>Anago</em> (sea eel), <em>Ebi</em> (boiled shrimp), and <em>Tamago</em> (sweet rolled omelet).</li>
+            <li><strong>Dairy:</strong> All Hokkaido milk and soft-serve ice cream are pasteurized and safe!</li>
+          </ul>
+        </div>
 
-      <div class="checklist-section">
-        <h3>🍼 In-Flight Diaper Clutch & Emergency Kit</h3>
-        <ul class="interactive-checklist">
-          <li>
-            <input type="checkbox" id="chk-diaper-clutch">
-            <label for="chk-diaper-clutch">
-              <strong>1-Gallon Ziploc Diaper Clutch:</strong> 2 diapers, wipes, disposable pad, and 2 BOS bags in seatback pocket (no dragging heavy backpacks to the tiny lavatory).
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-diaper-math">
-            <label for="chk-diaper-math">
-              <strong>10–12 Diapers in Carry-On:</strong> 1 diaper per 2 hours of total door-to-door travel time (SFO to Sapporo is ~18 hours).
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-tylenol">
-            <label for="chk-tylenol">
-              <strong>Children's Liquid Tylenol & Syringe:</strong> Keep in personal bag for sudden fever or earache.
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="chk-disinfectant">
-            <label for="chk-disinfectant">
-              <strong>Sanitizing Wipes:</strong> Wipe down tray tables, armrests, seatbelts, and screens immediately upon sitting down.
-            </label>
-          </li>
-        </ul>
+        <!-- Card 3: Kayden Logistics -->
+        <div class="guide-card">
+          <div class="card-icon">👶</div>
+          <h3>Kayden (26 Months) Transit Rules</h3>
+          <ul>
+            <li><strong>100% Free Public Transit:</strong> Children under 6 ride all JR trains, subways, and buses completely <strong>FREE</strong> across Japan without a ticket.</li>
+            <li><strong>On-the-Go Stroller Napping:</strong> Because Kayden can sleep in his reclining stroller, you don't need to return to the hotel every afternoon! Maria can relax in quiet cafes while Kayden naps on flat promenade paths.</li>
+            <li><strong>BOS Odor Diaper Bags:</strong> Buy a box of <em>BOSおむつが臭わない袋</em> at any Japanese drugstore on Day 1. Public trash cans are scarce in Japan; these seal dirty diaper smells completely.</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Restaurant Request Card -->
+        <div class="guide-card">
+          <div class="card-icon">🏮</div>
+          <h3>Private Dining Room / Child Chair Request</h3>
+          <p>Show this card when arriving at restaurants:</p>
+          <div class="japanese-phrase-box">
+            <p class="jp-text">2歳の子どもと妊婦がいます。個室または落ち着いた席はありますか？子ども用の椅子もお願いします。</p>
+            <p class="romaji">"2-sai no kodomo to ninpu ga imasu. Koshitsu matawa ochitsuita seki wa arimasu ka? Kodomo-yo no isu mo onegai shimasu."</p>
+            <p class="en-translation">("We have a 2-year-old child and a pregnant guest. Is a private room or quiet table available? Also a child chair, please.")</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ==================== TAB 4: SNACKS & GIFTS (OMIYAGE) ==================== -->
     <section id="tab-shopping" class="tab-pane">
       <div class="pane-header">
         <h2>Japanese Regional Snack & Gift Guide</h2>
@@ -456,72 +813,6 @@
       </div>
     </section>
 
-    <!-- ==================== TAB 5: PREGNANCY & TODDLER ==================== -->
-    <section id="tab-family-guide" class="tab-pane">
-      <div class="pane-header">
-        <h2>Maria (5 Mo Pregnant) & Kayden (26 Mo) Guide</h2>
-        <p>Essential local tips, Japanese phrase cards, and transit conveniences.</p>
-      </div>
-
-      <div class="guide-grid">
-        <!-- Card 1: Maternity Mark -->
-        <div class="guide-card highlight">
-          <div class="card-icon">🤰</div>
-          <h3>Pick Up the "Maternity Mark" (Day 1)</h3>
-          <p>Japan’s Ministry of Health provides a pink circular badge that commuters and conductors treat with immense respect.</p>
-          <p><strong>Where to get it free:</strong> At Haneda Airport station or Sapporo Station ticket booth, show this phrase:</p>
-          <div class="japanese-phrase-box">
-            <p class="jp-text">妊婦です。マタニティマークをください。</p>
-            <p class="romaji">"Ninpu desu. Mataniti maaku o kudasai."</p>
-            <p class="en-translation">("I am pregnant. Please give me a maternity mark.")</p>
-          </div>
-        </div>
-
-        <!-- Card 2: Food & Drinks -->
-        <div class="guide-card">
-          <div class="card-icon">🍵</div>
-          <h3>Caffeine-Free Drinks & Food Safety</h3>
-          <ul>
-            <li><strong>Caffeine-Free in All Vending Machines:</strong> Look for <strong>Mugi-cha (麦茶 - Roasted Barley Tea)</strong> and <strong>Rooibos Tea</strong>. Both are completely non-caffeinated and refreshing.</li>
-            <li><strong>Well-Done Eggs Card:</strong> Sukiyaki and beef bowls often come with raw egg. Show this to your server:</li>
-          </ul>
-          <div class="japanese-phrase-box">
-            <p class="jp-text">卵はよく火を通してください。</p>
-            <p class="romaji">"Tamago wa yoku hi o tooshite kudasai."</p>
-            <p class="en-translation">("Please cook the egg thoroughly.")</p>
-          </div>
-          <ul>
-            <li><strong>Cooked Sushi Alternatives:</strong> Order <em>Unagi</em> (grilled eel), <em>Anago</em> (sea eel), <em>Ebi</em> (boiled shrimp), and <em>Tamago</em> (sweet rolled omelet).</li>
-            <li><strong>Dairy:</strong> All Hokkaido milk and soft-serve ice cream are pasteurized and safe!</li>
-          </ul>
-        </div>
-
-        <!-- Card 3: Kayden Logistics -->
-        <div class="guide-card">
-          <div class="card-icon">👶</div>
-          <h3>Kayden (26 Months) Transit Rules</h3>
-          <ul>
-            <li><strong>100% Free Public Transit:</strong> Children under 6 ride all JR trains, subways, and buses completely <strong>FREE</strong> across Japan without a ticket.</li>
-            <li><strong>On-the-Go Stroller Napping:</strong> Because Kayden can sleep in his reclining stroller, you don't need to return to the hotel every afternoon! Maria can relax in quiet cafes while Kayden naps on flat promenade paths.</li>
-            <li><strong>BOS Odor Diaper Bags:</strong> Buy a box of <em>BOSおむつが臭わない袋</em> at any Japanese drugstore on Day 1. Public trash cans are scarce in Japan; these seal dirty diaper smells completely.</li>
-          </ul>
-        </div>
-
-        <!-- Card 4: Restaurant Request Card -->
-        <div class="guide-card">
-          <div class="card-icon">🏮</div>
-          <h3>Private Dining Room / Child Chair Request</h3>
-          <p>Show this card when arriving at restaurants:</p>
-          <div class="japanese-phrase-box">
-            <p class="jp-text">2歳の子どもと妊婦がいます。個室または落ち着いた席はありますか？子ども用の椅子もお願いします。</p>
-            <p class="romaji">"2-sai no kodomo to ninpu ga imasu. Koshitsu matawa ochitsuita seki wa arimasu ka? Kodomo-yo no isu mo onegai shimasu."</p>
-            <p class="en-translation">("We have a 2-year-old child and a pregnant guest. Is a private room or quiet table available? Also a child chair, please.")</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== TAB 6: RESERVATIONS ==================== -->
     <section id="tab-reservations" class="tab-pane">
       <div class="pane-header">
         <h2>Advance Reservations Watchlist</h2>
