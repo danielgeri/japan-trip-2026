@@ -33,7 +33,7 @@
     <nav class="tab-nav">
       <button class="nav-tab active" data-tab="itinerary">📅 Itinerary</button>
       <button class="nav-tab" data-tab="weather">🌤️ Weather & Clothes</button>
-      <button class="nav-tab" data-tab="flight-kit">✅ Pre-Flight Checklist</button>
+      <button class="nav-tab" data-tab="flight-kit">🎒 Packing & Checklist</button>
       <button class="nav-tab" data-tab="bookings">✈️ Bookings</button>
       <button class="nav-tab" data-tab="family-guide">👶 Maria & Kayden</button>
       <button class="nav-tab" data-tab="shopping">🛍️ Snacks & Gifts</button>
@@ -495,6 +495,417 @@
             <input type="checkbox" id="chk-gate-stroller-haneda">
             <label for="chk-gate-stroller-haneda">
               <strong>Collect Stroller at Haneda Jetbridge:</strong> Pick up gate-checked stroller immediately upon exiting plane at Tokyo Haneda Terminal 3 for easy transit through customs!
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ==================== MASTER PACKING LIST BY CATEGORY ==================== -->
+      <div class="pane-header" style="margin-top: 36px; padding-top: 24px; border-top: 2px dashed var(--border-color);">
+        <h2>🧳 Master Suitcase & Carry-On Packing Lists</h2>
+        <p>Systematic, categorized packing checklist for all 5 travelers. Check off items as you pack!</p>
+      </div>
+
+      <!-- Bag Strategy Alert -->
+      <div class="tip-box highlight" style="margin-bottom: 20px; border-left: 4px solid var(--primary); background: #fffafb;">
+        <strong>📐 Bag Allocation Strategy:</strong><br>
+        • <strong>Checked Bags (3–4 large max):</strong> Heavy layers, bulk diapers, spare shoes. Leave 1 bag half-empty (or pack a flat foldable duffel) for return souvenirs!<br>
+        • <strong>2-Day Carry-On Duffle:</strong> Staged for <strong>Oct 20–22</strong> when main luggage is forwarded from Sapporo hotel to Kyoto Airbnb via Yamato Takkyubin.<br>
+        • <strong>Personal Cabin Items:</strong> Diaper clutch, sleep cues, meds, electronics, and Maria's comfort pack.
+      </div>
+
+      <!-- Category 1: Documents & Money -->
+      <div class="checklist-section">
+        <h3>📄 1. Travel Documents, Banking & Money</h3>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-doc-passports">
+            <label for="chk-doc-passports">
+              <strong>Passports for All 5:</strong> Daniel, Maria, Kayden, Kumi, James (valid 6+ months from departure).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-license">
+            <label for="chk-doc-license">
+              <strong>Physical Driver's Licenses:</strong> For domestic flights (LAX-SFO) and secondary photo ID.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-vjw-offline">
+            <label for="chk-doc-vjw-offline">
+              <strong>Visit Japan Web Offline QR Codes:</strong> Screenshots saved to camera roll on all adults' phones.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-confirmations">
+            <label for="chk-doc-confirmations">
+              <strong>Booking Confirmations (Offline / Printed):</strong> ANA/United (AIYCF3), Southwest (BTAT65), Sapporo Nikko Hotel (73504494773451), Kyoto KotoStay (HMRQJQQTC3), Kamakura Hotel (1032548490).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-cards">
+            <label for="chk-doc-cards">
+              <strong>No-Foreign-Fee Credit Cards:</strong> Primary cards for hotels and dining (Chase Sapphire, Amex, etc.).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-atm">
+            <label for="chk-doc-atm">
+              <strong>ATM / Debit Card with 4-Digit PIN:</strong> For fee-free cash yen withdrawals at 7-Eleven (7-Bank ATMs).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-coinpurse">
+            <label for="chk-doc-coinpurse">
+              <strong>Dedicated Coin Purse:</strong> A small zippered coin pouch for Japan's heavy coin circulation (¥1, ¥5, ¥10, ¥50, ¥100, ¥500).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-maternity-note">
+            <label for="chk-doc-maternity-note">
+              <strong>Maria's Prenatal Travel Note:</strong> OB-GYN travel clearance letter & prenatal records copy.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-doc-insurance">
+            <label for="chk-doc-insurance">
+              <strong>Health & Travel Insurance Cards:</strong> Physical cards + policy numbers saved in Apple Notes.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Category 2: Electronics & Tech -->
+      <div class="checklist-section">
+        <h3>🔌 2. Electronics & Cables (Cabin Bag Only)</h3>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-elec-ipad-offline">
+            <label for="chk-elec-ipad-offline">
+              <strong>Kayden's iPad:</strong> Fully charged, offline downloads verified in airplane mode.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-elec-headphones">
+            <label for="chk-elec-headphones">
+              <strong>Toddler Volume-Limited Headphones:</strong> 85dB limit + Lightning/USB-C 3.5mm dongle + airline 2-prong adapter.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-elec-adult-headphones">
+            <label for="chk-elec-adult-headphones">
+              <strong>Adult Noise-Canceling Earbuds / Headphones:</strong> AirPods Pro or over-ear headphones + cables.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-elec-powerbanks">
+            <label for="chk-elec-powerbanks">
+              <strong>Portable Power Banks (2x):</strong> Under 100Wh (~27,000mAh) kept strictly in carry-on bag (FAA prohibited in checked luggage).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-elec-wallchargers">
+            <label for="chk-elec-wallchargers">
+              <strong>Multi-Port USB-C Wall Chargers (65W):</strong> Fast charger with 3–4 ports for simultaneous nightstand charging.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-elec-cables">
+            <label for="chk-elec-cables">
+              <strong>Extra-Long Braided Cables (6ft–10ft):</strong> Reaches beds in Japanese hotel rooms where outlets are distant.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-elec-airtags">
+            <label for="chk-elec-airtags">
+              <strong>Apple AirTags:</strong> 1 in each checked suitcase, 1 in the stroller, 1 in the carry-on duffle.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Category 3: Kayden Toddler Master Kit -->
+      <div class="checklist-section">
+        <h3>👶 3. Kayden (26 Months) Toddler Master Kit</h3>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-toddler-diapers-bulk">
+            <label for="chk-toddler-diapers-bulk">
+              <strong>Diapers:</strong> 10–12 in carry-on + 1 bulk pack in checked suitcase (replenish at Akachan Honpo Sapporo if needed).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-clutch-gear">
+            <label for="chk-toddler-clutch-gear">
+              <strong>Seatback Diaper Clutch:</strong> 1-gallon Ziploc with 3 diapers, travel wipes, disposable pad, and 3 BOS bags.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-bos-box">
+            <label for="chk-toddler-bos-box">
+              <strong>1 Box BOS Odor-Sealing Diaper Bags:</strong> For odorless containment in hotel rooms and on public transit.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-emergency-clothes-pack">
+            <label for="chk-toddler-emergency-clothes-pack">
+              <strong>2 Full Changes of Clothes in Ziplocs:</strong> Stowed in carry-on for in-flight spills or accidents.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-sleep-gear-pack">
+            <label for="chk-toddler-sleep-gear-pack">
+              <strong>Home Sleep Cues:</strong> Unwashed sleep sack/blanket, favorite bedtime plush toy, pajamas, and bedtime book.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-canopy-pack">
+            <label for="chk-toddler-canopy-pack">
+              <strong>Muslin Sleep Canopy & Clips:</strong> Breathable muslin swaddle + 2 clips for in-flight darkness tent.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-toys-pack">
+            <label for="chk-toddler-toys-pack">
+              <strong>5–6 Wrapped Surprise Toys:</strong> Water Wow, gel window clings, LCD drawing board, mini cars, sticker pads.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-snacks-pack">
+            <label for="chk-toddler-snacks-pack">
+              <strong>Toddler Snacks & Straw Cup:</strong> Loaded snack spinner, fruit pouches (TSA exempt), Dum Dums lollipops for descent.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-stroller-gear">
+            <label for="chk-toddler-stroller-gear">
+              <strong>Stroller Weather Kit:</strong> Plush fleece stroller blanket/bunting wrap + clear plastic rain/wind shield for Sapporo chill.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-shoes-backup">
+            <label for="chk-toddler-shoes-backup">
+              <strong>Toddler Shoes:</strong> 2 pairs broken-in sneakers (1 primary, 1 backup for rain/puddles) + 6 pairs warm socks.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-toddler-bibs-utensils">
+            <label for="chk-toddler-bibs-utensils">
+              <strong>Feeding Accessories:</strong> 2 silicone catch-all bibs (wash in sink) + travel fork/spoon set.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Category 4: Maria Maternity Kit -->
+      <div class="checklist-section">
+        <h3>🤰 4. Maria (5 Months Pregnant) Comfort & Care</h3>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-mat-compression-pack">
+            <label for="chk-mat-compression-pack">
+              <strong>Graduated Compression Socks (2–3 pairs, 20–30 mmHg):</strong> Must wear during all flights to prevent swelling & DVT.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-lumbar-pack">
+            <label for="chk-mat-lumbar-pack">
+              <strong>Inflatable Lumbar Support Pillow:</strong> Fits lower back in economy seats to prevent pregnancy sciatica spasms.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-sleep-mask">
+            <label for="chk-mat-sleep-mask">
+              <strong>Contoured 3D Eye Mask & Earplugs:</strong> For guaranteed 4-hour sleep shifts during the flight.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-prenatals-pack">
+            <label for="chk-mat-prenatals-pack">
+              <strong>Prenatal Vitamins & Daily Meds:</strong> In carry-on daily pill organizer.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-water-bottle">
+            <label for="chk-mat-water-bottle">
+              <strong>Refillable Insulated Water Bottle:</strong> Continuous hydration for amniotic fluid and circulation.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-nausea-tums">
+            <label for="chk-mat-nausea-tums">
+              <strong>Pregnancy Comfort Remedies:</strong> Tums chewables, ginger candies, lip balm, and hydrating facial mist.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-leggings-pack">
+            <label for="chk-mat-leggings-pack">
+              <strong>Over-The-Belly Maternity Leggings (2–3 pairs):</strong> Non-restrictive, stretchy waistbands for walking & travel.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-heattech-pack">
+            <label for="chk-mat-heattech-pack">
+              <strong>Maternity Heattech Tops (2x):</strong> Stretchy thermal base layers for Sapporo.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-bellyband-pack">
+            <label for="chk-mat-bellyband-pack">
+              <strong>Maternity Belly Support Band:</strong> Gentle lift for Kiyomizu-dera temple staircases.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-mat-shoes-pack">
+            <label for="chk-mat-shoes-pack">
+              <strong>Cushioned Supportive Slip-On Sneakers:</strong> Accommodates mild pregnancy foot expansion comfortably.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Category 5: Adults Modular Clothing -->
+      <div class="checklist-section">
+        <h3>👨‍👩‍👦 5. Adults (Daniel, Kumi, James) Modular Wardrobe</h3>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-adult-heattech-pack">
+            <label for="chk-adult-heattech-pack">
+              <strong>Layer 1 Base (Heattech):</strong> 2 sets Uniqlo Heattech tops & bottoms per adult for Sapporo chill.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-shirts-pack">
+            <label for="chk-adult-shirts-pack">
+              <strong>Tops:</strong> 3–4 long-sleeve shirts + 2–3 breathable short-sleeve tees per person.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-midlayer-pack">
+            <label for="chk-adult-midlayer-pack">
+              <strong>Layer 2 Mid (Insulation):</strong> 1 fleece zip jacket, wool cardigan, or sweater per person.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-down-pack">
+            <label for="chk-adult-down-pack">
+              <strong>Layer 3 Outer (Packable Down):</strong> 1 Ultra-Light Down jacket that compresses into a pouch.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-pants-pack">
+            <label for="chk-adult-pants-pack">
+              <strong>Pants:</strong> 2–3 pairs comfortable stretch chinos, dark jeans, or travel trousers.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-socks-pack">
+            <label for="chk-adult-socks-pack">
+              <strong>Socks:</strong> 7 pairs cushioned moisture-wicking wool socks (Smartwool/Darn Tough).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-shoes-pack">
+            <label for="chk-adult-shoes-pack">
+              <strong>Footwear:</strong> 1 pair broken-in supportive walking shoes (wear on plane; 15,000+ steps/day).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-adult-accessories-pack">
+            <label for="chk-adult-accessories-pack">
+              <strong>Weather Accessories:</strong> 1 knit beanie, 1 compact travel umbrella, 1 rain shell/windbreaker.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Category 6: Family First Aid & Health -->
+      <div class="checklist-section">
+        <h3>💊 6. Family First Aid & Health Kit</h3>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-med-prescriptions">
+            <label for="chk-med-prescriptions">
+              <strong>Prescription Medications:</strong> Original labeled pharmacy bottles in carry-on bag.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-med-children-tylenol">
+            <label for="chk-med-children-tylenol">
+              <strong>Children's Liquid Tylenol & Motrin:</strong> Infant/toddler fever & pain relief + dosing syringes.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-med-adult-pain">
+            <label for="chk-med-adult-pain">
+              <strong>Adult Pain Relief:</strong> Ibuprofen (Advil) / Acetaminophen (Tylenol).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-med-stomach">
+            <label for="chk-med-stomach">
+              <strong>Digestive Aid:</strong> Pepto-Bismol chewables, Imodium, Tums.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-med-blister-patches">
+            <label for="chk-med-blister-patches">
+              <strong>Hydrocolloid Blister Cushions:</strong> Band-Aid Hydro Seal patches for heavy temple walking days.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-med-wound-care">
+            <label for="chk-med-wound-care">
+              <strong>Wound Care & Antiseptic:</strong> Assorted Band-Aids, Neosporin ointment, antiseptic wipes.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-med-electrolytes-pack">
+            <label for="chk-med-electrolytes-pack">
+              <strong>Electrolyte Powder Packets:</strong> Liquid I.V. / DripDrop packets for on-the-go hydration.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-med-thermometer-pack">
+            <label for="chk-med-thermometer-pack">
+              <strong>Digital Thermometer:</strong> Compact forehead/ear thermometer.
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Category 7: Luggage Accessories & Forwarding -->
+      <div class="checklist-section">
+        <h3>🧳 7. Luggage Accessories & Forwarding Stage</h3>
+        <ul class="interactive-checklist">
+          <li>
+            <input type="checkbox" id="chk-lug-packing-cubes">
+            <label for="chk-lug-packing-cubes">
+              <strong>Color-Coded Packing Cubes:</strong> Blue (Daniel), Pink (Maria), Green (Kayden), Yellow (Kumi), Orange (James).
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-lug-2day-forwarding-duffle">
+            <label for="chk-lug-2day-forwarding-duffle">
+              <strong>2-Day Carry-On Duffle Staged:</strong> Packed for <strong>Oct 20–22</strong> when main bags are forwarded from Sapporo hotel to Kyoto Airbnb via Yamato Takkyubin.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-lug-expandable-duffle">
+            <label for="chk-lug-expandable-duffle">
+              <strong>Foldable Expandable Duffel:</strong> Stowed flat in suitcase; unfolds on return to carry Japanese snacks & omiyage!
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-lug-hanging-scale">
+            <label for="chk-lug-hanging-scale">
+              <strong>Digital Luggage Scale:</strong> To verify checked suitcases stay under the 50 lb (23 kg) limit before flights.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk-lug-ziploc-supply">
+            <label for="chk-lug-ziploc-supply">
+              <strong>Ziploc Bags & Plastic Bags:</strong> 5–10 gallon Ziplocs for wet clothes, soiled diapers, and snacks.
             </label>
           </li>
         </ul>
