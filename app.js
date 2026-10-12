@@ -166,6 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
   setupDayFilters();
   setupChecklistPersistence();
+  setupPWA();
 });
 
 // Render Itinerary Cards
@@ -278,3 +279,256 @@ function setupChecklistPersistence() {
     });
   });
 }
+
+// ==========================================
+// Progressive Web App (PWA) & Offline Engine
+// ==========================================
+let swRegistration = null;
+let isRefreshing = false;
+let deferredInstallPrompt = null;
+
+function setupPWA() {
+  if (!('serviceWorker' in navigator)) {
+    console.log('[PWA] Service Workers not supported in this browser.');
+    return;
+  }
+
+  // 1. Register Service Worker with updateViaCache: 'none' to bypass HTTP cache for sw.js
+  navigator.serviceWorker
+    .register('./sw.js', { updateViaCache: 'none' })
+    .then((registration) => {
+      swRegistration = registration;
+      console.log('[PWA] Service Worker registered with scope:', registration.scope);
+
+      // Proactively check for updates immediately upon registration
+      registration.update().catch(() => {});
+
+      // If a waiting worker already exists when the user opens the page, prompt immediately
+      if (registration.waiting && navigator.serviceWorker.controller) {
+        showUpdateToast(registration);
+      }
+
+      // Listen for when a new service worker is installing
+      registration.addEventListener('updatefound', () => {
+        const installingWorker = registration.installing;
+        if (!installingWorker) return;
+
+        installingWorker.addEventListener('statechange', () => {
+          if (installingWorker.state === 'installed') {
+            if (navigator.serviceWorker.controller) {
+              // Update available!
+              console.log('[PWA] New version ready for activation.');
+              showUpdateToast(registration);
+            } else {
+              // Initial offline caching complete
+              console.log('[PWA] App shell cached for offline travel use.');
+            }
+          }
+        });
+      });
+    })
+    .catch((error) => {
+      console.warn('[PWA] Service Worker registration failed:', error);
+    });
+
+  // 2. Seamlessly reload when the active service worker controller changes
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (isRefreshing) return;
+    isRefreshing = true;
+    console.log('[PWA] Controller changed, reloading to display latest changes.');
+    window.location.reload();
+  });
+
+  // 3. Proactive Auto-Update Triggers
+  // Trigger check whenever user unlocks phone or switches back to this app tab
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && swRegistration && navigator.onLine) {
+      swRegistration.update().catch(() => {});
+    }
+  });
+
+  // Trigger check when returning online (e.g. turning off airplane mode or connecting to Wi-Fi)
+  window.addEventListener('online', () => {
+    updateOnlineStatus(true);
+    if (swRegistration) swRegistration.update().catch(() => {});
+  });
+
+  window.addEventListener('offline', () => {
+    updateOnlineStatus(false);
+  });
+
+  // Periodic background check every 30 minutes
+  setInterval(() => {
+    if (swRegistration && navigator.onLine) {
+      swRegistration.update().catch(() => {});
+    }
+  }, 30 * 60 * 1000);
+
+  // 4. Install Prompt Engine (Android Chrome & iOS Safari)
+  setupInstallPrompt();
+
+  // 5. Manual Update Checker & Status Indicator
+  setupManualUpdateCheck();
+
+  // Initial network status
+  updateOnlineStatus(navigator.onLine);
+}
+
+function showUpdateToast(registration) {
+  const toast = document.getElementById('pwa-update-toast');
+  const reloadBtn = document.getElementById('pwa-reload-btn');
+  const dismissBtn = document.getElementById('pwa-dismiss-btn');
+  if (!toast) return;
+
+  toast.style.display = 'flex';
+
+  if (reloadBtn) {
+    reloadBtn.onclick = () => {
+      if (registration && registration.waiting) {
+        // Send message to waiting worker to skipWaiting
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      } else {
+        window.location.reload();
+      }
+    };
+  }
+
+  if (dismissBtn) {
+    dismissBtn.onclick = () => {
+      toast.style.display = 'none';
+    };
+  }
+}
+
+function setupInstallPrompt() {
+  const installBtn = document.getElementById('pwa-install-btn');
+  const iosModal = document.getElementById('ios-install-modal');
+  const iosModalClose = document.getElementById('ios-modal-close');
+  const iosModalGotIt = document.getElementById('ios-modal-got-it');
+
+  if (!installBtn) return;
+
+  // Check if iOS and check if already running in standalone display mode
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+
+  // If already installed and opened as standalone PWA app, hide install button
+  if (isStandalone) {
+    installBtn.style.display = 'none';
+    return;
+  }
+
+  // Android / Chrome (Daniel's Pixel 11 Pro): capture beforeinstallprompt
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    installBtn.style.display = 'inline-flex';
+  });
+
+  // iOS Safari (Maria, Kumi, James): show install button which triggers instruction modal
+  if (isIOS && !isStandalone) {
+    installBtn.style.display = 'inline-flex';
+  }
+
+  // Handle click on Install button
+  installBtn.addEventListener('click', async () => {
+    if (deferredInstallPrompt) {
+      deferredInstallPrompt.prompt();
+      const choice = await deferredInstallPrompt.userChoice;
+      if (choice.outcome === 'accepted') {
+        console.log('[PWA] User accepted the home screen installation.');
+        installBtn.style.display = 'none';
+      }
+      deferredInstallPrompt = null;
+    } else if (isIOS) {
+      if (iosModal) iosModal.style.display = 'flex';
+    } else {
+      // Desktop or other mobile fallback
+      if (iosModal) {
+        iosModal.style.display = 'flex';
+      } else {
+        alert('To install this app, tap your browser menu and select "Install" or "Add to Home Screen".');
+      }
+    }
+  });
+
+  // iOS modal interactions
+  if (iosModalClose) {
+    iosModalClose.addEventListener('click', () => {
+      iosModal.style.display = 'none';
+    });
+  }
+  if (iosModalGotIt) {
+    iosModalGotIt.addEventListener('click', () => {
+      iosModal.style.display = 'none';
+    });
+  }
+  if (iosModal) {
+    iosModal.addEventListener('click', (e) => {
+      if (e.target === iosModal) {
+        iosModal.style.display = 'none';
+      }
+    });
+  }
+
+  // Handle successful installation
+  window.addEventListener('appinstalled', () => {
+    console.log('[PWA] Japan Trip app successfully installed!');
+    installBtn.style.display = 'none';
+    deferredInstallPrompt = null;
+  });
+}
+
+function setupManualUpdateCheck() {
+  const checkBtn = document.getElementById('pwa-check-update-btn');
+  if (!checkBtn) return;
+
+  checkBtn.addEventListener('click', async () => {
+    if (!navigator.onLine) {
+      alert('You are currently offline (Airplane Mode). The trip guide is running from offline cache.');
+      return;
+    }
+
+    checkBtn.textContent = 'Checking...';
+    checkBtn.disabled = true;
+
+    if (swRegistration) {
+      try {
+        await swRegistration.update();
+        setTimeout(() => {
+          checkBtn.textContent = 'Up to Date ✓';
+          setTimeout(() => {
+            checkBtn.textContent = 'Check for Updates';
+            checkBtn.disabled = false;
+          }, 2500);
+        }, 800);
+      } catch (err) {
+        checkBtn.textContent = 'Check for Updates';
+        checkBtn.disabled = false;
+      }
+    } else {
+      setTimeout(() => {
+        checkBtn.textContent = 'Up to Date ✓';
+        setTimeout(() => {
+          checkBtn.textContent = 'Check for Updates';
+          checkBtn.disabled = false;
+        }, 2000);
+      }, 500);
+    }
+  });
+}
+
+function updateOnlineStatus(isOnline) {
+  const dot = document.getElementById('pwa-status-dot');
+  const text = document.getElementById('pwa-status-text');
+  if (!dot || !text) return;
+
+  if (isOnline) {
+    dot.className = 'status-dot online';
+    text.textContent = 'Online • Auto-sync active';
+  } else {
+    dot.className = 'status-dot offline';
+    text.textContent = '✈️ Airplane Mode • Trip cache active';
+  }
+}
+

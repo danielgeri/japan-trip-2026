@@ -7,7 +7,18 @@
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta name="description" content="Master logistics, day-by-day itinerary, flight ledger, and toddler/pregnancy travel guide for the Geri family trip to Japan.">
-  <meta name="theme-color" content="#d946ef">
+  <meta name="theme-color" content="#e11d48">
+
+  <!-- Progressive Web App & Offline Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Japan 2026">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,6 +36,10 @@
         </div>
       </div>
       <div class="header-actions">
+        <button id="pwa-install-btn" class="install-pill" style="display: none;" title="Install Japan 2026 App to Home Screen">
+          <span class="install-icon">📲</span>
+          <span>Install App</span>
+        </button>
         <a href="https://wanderlog.com/plan/hadwlxzvodxppfsw" target="_blank" rel="noopener" class="wanderlog-pill">
           <span>Open Wanderlog</span> ↗
         </a>
@@ -42,6 +57,21 @@
       <button class="nav-tab" data-tab="reservations">🍽️ Reservations</button>
     </nav>
   </header>
+
+  <!-- Floating Update Notification Toast -->
+  <aside id="pwa-update-toast" class="update-toast" style="display: none;" aria-live="polite">
+    <div class="update-toast-content">
+      <span class="update-icon">✨</span>
+      <div class="update-text">
+        <strong>Trip Guide Updated!</strong>
+        <span>New itinerary & packing details are ready.</span>
+      </div>
+    </div>
+    <div class="update-actions">
+      <button id="pwa-reload-btn" class="update-reload-btn">Reload</button>
+      <button id="pwa-dismiss-btn" class="update-dismiss-btn" aria-label="Dismiss">✕</button>
+    </div>
+  </aside>
 
   <main class="main-content">
 
@@ -1361,6 +1391,13 @@
   </main>
 
   <footer class="app-footer">
+    <div class="pwa-status-bar">
+      <span class="status-indicator">
+        <span id="pwa-status-dot" class="status-dot online"></span>
+        <span id="pwa-status-text">Online • Auto-sync enabled</span>
+      </span>
+      <button id="pwa-check-update-btn" class="status-check-btn" title="Check for website updates">Check for Updates</button>
+    </div>
     <p>Made with ❤️ for the Geri Family Japan Trip 2026</p>
     <p class="footer-links">
       <a href="https://wanderlog.com/plan/hadwlxzvodxppfsw" target="_blank">Wanderlog Trip</a> • 
@@ -1368,6 +1405,39 @@
       <span>Emergency: 110 (Police) / 119 (Ambulance)</span>
     </p>
   </footer>
+
+  <!-- iOS Install Instructions Modal (for Maria, Kumi & James) -->
+  <div id="ios-install-modal" class="ios-modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="ios-modal-title">
+    <div class="ios-modal-card">
+      <div class="ios-modal-header">
+        <h3 id="ios-modal-title">📲 Install on iPhone / iPad</h3>
+        <button id="ios-modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="ios-modal-body">
+        <p class="ios-modal-intro">Install this app to your Home Screen for quick 1-tap access and <strong>100% offline access</strong> during your flights and underground train rides:</p>
+        <ol class="ios-steps-list">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-desc">Tap the <strong>Share</strong> button <span class="ios-badge">⎋</span> at the bottom of Safari (the square with an arrow pointing up).</div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-desc">Scroll down the share sheet and tap <strong>Add to Home Screen</strong> <span class="ios-badge">⊕</span>.</div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-desc">Tap <strong>Add</strong> in the top-right corner. The Japan 2026 icon will appear on your home screen!</div>
+          </li>
+        </ol>
+        <div class="ios-modal-tip">
+          ✈️ <strong>In-Flight Ready:</strong> Once installed, all day-by-day schedules, transit tips, and checklists work in Airplane Mode with zero cellular service.
+        </div>
+      </div>
+      <div class="ios-modal-footer">
+        <button id="ios-modal-got-it" class="btn-ios-done">Got it, thanks!</button>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
