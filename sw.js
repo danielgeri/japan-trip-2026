@@ -1,4 +1,4 @@
-const CACHE_NAME = 'japan-trip-2026-v5';
+const CACHE_NAME = 'japan-trip-2026-v6';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
