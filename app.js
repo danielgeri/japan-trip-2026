@@ -10,8 +10,9 @@ const itineraryData = [
     afternoon: "Transpacific crossing. Maria wears graduated compression socks and takes short aisle walks every 2 hours. Kayden enjoys offline iPad shows, surprise wrapped novelty toys, and horizontal lap-bridge sleep.",
     evening: "Crossing the International Date Line. Overnight in-flight rest using the 5-adult tag-team shift rotation.",
     dining: {
-      lunch: "Main cabin meal service (~2 hours after takeoff) + pre-packed toddler snack spinner.",
-      dinner: "Pre-landing breakfast service (~2 hours prior to Tokyo Haneda arrival)."
+      lunch: "<strong>In-Flight Main Meal:</strong> Served ~2 hours after takeoff + pre-packed toddler snack spinner (freeze-dried strawberries, crackers, cheese sticks).",
+      dinner: "<strong>Pre-Landing Meal:</strong> Served ~2 hours prior to Tokyo Haneda arrival.",
+      kidSafeOrder: "Keep a fruit squeeze pouch or Dum Dums lollipop handy for Kayden's ears during the final 35-minute descent into Haneda."
     },
     pregnancyTip: "Prioritize an aisle seat for Maria, use the inflatable lumbar pillow, and keep a Dum Dums lollipop or fruit pouch ready for Kayden during the final 35-minute descent."
   },
@@ -25,8 +26,9 @@ const itineraryData = [
     afternoon: "5:30 PM: Japan Airlines Flight JL 525 to Sapporo New Chitose Airport (CTS). Assigned Seats: Row 36 (36K, 36J, 36H, 36G, 36E). Lands at 7:05 PM.",
     evening: "Take the indoor elevator to CTS Basement (B1F) and board the JR Rapid Airport Express (37 mins) directly to Sapporo Station. Take the indoor station elevator straight into JR Tower Hotel Nikko Sapporo!",
     dining: {
-      lunch: "Light meal & snacks at Haneda Terminal 1 domestic departure lounge.",
-      dinner: "Kasyunan (花旬庵) at Stellar Place 6F (Hot buckwheat soba & tempura directly inside the station building) OR Matsuo Genghis Khan."
+      lunch: "<strong>Haneda Terminal 1 (Before 5:30 PM Flight):</strong> 1) <strong>Hitoshinaya (ひとしなや)</strong> (Renowned warm dashi salmon/rice set & broth right in T1); 2) <strong>Marugame Seimen (丸亀製麺 T1)</strong> (Fast warm udon noodles & sweet potato tempura); 3) <strong>Royal Host Haneda T1</strong> (Spacious family booths, pancakes & kids plates).",
+      dinner: "<strong>Inside Your Hotel / Station Building (Stellar Place 6F — 100% Indoors):</strong> 1) <strong>Kasyunan (花旬庵)</strong> (Warm buckwheat soba/udon & crispy tempura in wide booths—fastest arrival meal); 2) <strong>Tonkatsu Wako (とんかつ和幸 Stellar Place 6F)</strong> (Crispy pork tenderloin cutlets, miso soup & free white rice refills); 3) <strong>Matsuo Genghis Khan (松尾ジンギスカン)</strong> (Sweet apple-marinated Hokkaido lamb & udon); 4) <strong>Daimaru B1F Depachika / 7-Eleven Room Picnic</strong> (If everyone is exhausted at 8:30 PM, grab warm bento boxes, egg sandwiches & fruit to eat in your hotel rooms!).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> Warm Kitsune Udon (mild broth noodles with sweet tofu), shrimp/sweet potato tempura, or a kids tonkatsu & steamed rice set."
     },
     weatherStrategy: "Passing evening showers & brisk 41°F air in Sapporo tonight—zero impact on your group because the entire transfer from CTS Airport to JR Sapporo Station, your hotel lobby, and Stellar Place 6F dinner is 100% enclosed indoors.",
     pregnancyTip: "Pick up the free pink 'Maternity Mark' badge at the Haneda or Sapporo JR ticket counter, and keep power banks in your under-seat personal bag (never in overhead bins on JAL)."
@@ -40,8 +42,10 @@ const itineraryData = [
     afternoon: "12:45 PM – 3:00 PM (Weather-Smart Swap): Stroll Odori Park autumn foliage & ride the elevator up Sapporo TV Tower in the sunny early afternoon BEFORE late-afternoon rain showers arrive. At 3:00 PM, head underground into the climate-controlled Chi-Ka-Ho walkway & Atelier Morihiko cafe for Kayden's stroller nap.",
     evening: "5:30 PM: Private tatami room dinner in Susukino (short 5-minute taxi door-to-door so you stay dry during evening showers).",
     dining: {
-      lunch: "Cafe BUTLERS WHARF (Inside Shiroi Koibito Park) OR Soup Curry GARAKU (Braised chicken soup curry near Odori).",
-      dinner: "Sapporo Kani Shogun (札幌かに将軍 本店 — Private room steamed king crab hotpot & crab porridge) OR Ebisoba Ichigen Main Store (Rich shrimp miso ramen)."
+      breakfast: "<strong>Hotel SKY J (35F Panoramic Buffet)</strong> OR <strong>Sandria / Paul Bakery</strong> inside Sapporo Station (fresh warm egg/fruit sandwiches, croissants & Meiji 100% milk).",
+      lunch: "1) <strong>Cafe BUTLERS WHARF</strong> (Inside Shiroi Koibito Park — spaghetti, Hokkaido beef stew & pumpkin soup); 2) <strong>Soup Curry GARAKU or Suage+</strong> (Odori — braised chicken leg & sweet Hokkaido veggies; choose <strong>Spice Level 0/1</strong> for zero heat + Kids Curry); 3) <strong>Odori Bisse Food Hall (1F–4F)</strong> (Direct underground access at Odori Park—spacious tables, udon, pastries & Tokachi beef bowls with zero wait).",
+      dinner: "1) <strong>Sapporo Kani Shogun (札幌かに将軍 本店)</strong> (Private room steamed King Crab hotpot, crab dumplings & rice porridge); 2) <strong>Hokkaido Dining Kitchen Aiyo (あいよ)</strong> (Private enclosed booths serving buttered potatoes, yakitori skewers, grilled fish, corn & fluffy omelet); 3) <strong>Sapporo Ramen Kyowakoku (10F Station) or Ebisoba Ichigen</strong> (Famous Sapporo miso/shrimp ramen with family table booths).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> At Kani Shogun, order <em>Chawanmushi</em> (silky warm egg custard), crab Shumai dumplings, and <em>Zosui</em> (crab & egg rice porridge cooked in the pot at the end)."
     },
     weatherStrategy: "Schedule Tweaked for Sunday Weather: Sunday starts sunny and mild (20°C / 68°F) before scattered rain arrives late afternoon. We shifted Odori Park & TV Tower up to midday (12:45–2:30 PM) so all outdoor sightseeing happens in dry sunshine, keeping you underground/indoors after 3:00 PM!",
     transit: "15-minute taxi from JR Tower Hotel lobby to Shiroi Koibito Park or Maruyama Zoo (~¥2,500). Remember: 4 adults + 1 toddler requires either a Jumbo/Van taxi (Uber XL/GO) or 2 standard cabs.",
@@ -56,8 +60,10 @@ const itineraryData = [
     afternoon: "1:30 PM – 3:30 PM: Relax at LeTAO Main Store 2F Tea Salon for Double Fromage cheesecake and hot non-caffeinated rooibos tea while Kayden stroller-naps along pedestrian-friendly Sakaimachi Street. Return to Sapporo by train.",
     evening: "5:30 PM: Visit Sapporo Beer Museum (historic red-brick heritage brewery) & Akachan Honpo baby megastore next door at Ario Mall to restock Moony diapers or snacks.",
     dining: {
-      lunch: "Wakadori Jidai Naruto Main Store (Crispy golden half-fried chicken & rice sets) OR Otaru Masazushi Zenan (Cooked crab, shrimp, tamago & sushi in private booths).",
-      dinner: "Kessel Hall at Sapporo Beer Garden (Grand 1912 copper-kettle hall BBQ) OR Garden Grill (Quiet upscale Wagyu & roasted vegetables)."
+      breakfast: "<strong>Doutor / Starbucks APIA Underground</strong> OR <strong>Donq Bakery (Daimaru B1F)</strong> for warm Hokkaido milk bread, corn rolls & coffee before boarding the 9:45 AM Otaru train.",
+      lunch: "1) <strong>Wakadori Jidai Naruto Main Store (若鶏時代なると本店)</strong> (Huge family hall serving Otaru's famous crispy golden half-fried chicken, fries, udon & sushi sets); 2) <strong>Otaru Masazushi Honten or Zenan</strong> (Private booths with cooked crab, grilled scallops, tamago egg & sushi); 3) <strong>Otaru Bine (小樽バイン)</strong> (1912 stone bank building serving Hokkaido cheese fondues, roast beef & pasta in wide booths).",
+      dinner: "1) <strong>Garden Grill at Sapporo Beer Garden</strong> (Upscale, quiet glass-walled dining room with wide booths—grain-fed lamb, Hokkaido roast beef & vegetables without heavy smoke); 2) <strong>Kessel Hall at Sapporo Beer Garden</strong> (Iconic lively 1912 copper-kettle beer hall BBQ); 3) <strong>Ario Sapporo Mall Family Dining (Next Door)</strong> (Right inside the Akachan Honpo building—zero-wait family restaurants, udon,ハンバーグ hamburger steaks & kid sets).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> Naruto's crispy boneless chicken tenders + udon noodles at lunch; roasted Hokkaido potatoes, sweet corn, and well-done beef/lamb with rice rolls at dinner."
     },
     weatherStrategy: "Monday is dry and comfortable (18°C / 64°F daytime)—an ideal weather window for your coastal day trip to Otaru Canal. Bring a windproof outer layer for the cooler sea breeze.",
     transit: "JR Hakodate Line Rapid train between Sapporo and Minami-Otaru / Otaru Station. All platforms have elevator access."
@@ -71,8 +77,10 @@ const itineraryData = [
     afternoon: "1:30 PM – 3:30 PM: Warm up indoors during the cooler afternoon at Rokkatei Sapporo Honten 2F Cafe (fresh Marusei butter sandwiches & hot barley tea) and browse Daimaru Sapporo's 4F baby lounge & B1F Depachika food hall.",
     evening: "4:15 PM: Pull a paper queue ticket at Nemuro Hanamaru Sushi (Stellar Place 6F), stroll the covered 7-block Tanukikoji Shopping Arcade, and return for dinner.",
     dining: {
-      lunch: "Soup Curry Suage+ (Charcoal-grilled chicken & sweet Hokkaido vegetables in warm spice broth) OR Unagi Nakajima (Grilled eel over rice).",
-      dinner: "Nemuro Hanamaru Sushi (JR Stellar Place 6F — Hokkaido's #1 conveyor-belt sushi) OR Hyosetsu no Mon Sapporo (Historic King Crab banquet in private suites, Phone: +81 11-521-3046)."
+      breakfast: "<strong>Rokkatei or Kinotoya Bake (Sapporo Station)</strong> (Warm freshly baked cheese tarts, butter toast & coffee) OR hotel buffet.",
+      lunch: "1) <strong>Soup Curry Suage+ or奧芝商店 (Okushiba Shoten)</strong> (Rich shrimp/chicken broth soup curry with sweet Hokkaido pumpkin, carrots & potatoes; Level 0/1 non-spicy available); 2) <strong>Daimaru Sapporo 8F Restaurant Floor</strong> (Spacious booths with Tempura Tsunahachi, Tonkatsu & Kyoto Udon—luxury baby room on the same floor); 3) <strong>Rokkatei Sapporo Honten 2F Salon</strong> (Light lunch of crispy pizzas, hot soufflé pancakes & strawberry shortcake).",
+      dinner: "1) <strong>Nemuro Hanamaru Sushi (JR Stellar Place 6F)</strong> (Hokkaido's #1 conveyor-belt sushi; pull ticket at 4:15 PM and track on phone); 2) <strong>Kaitenzushi Toriton (回転寿し トリトン 円山店 / 豊平店)</strong> (Locals' favorite conveyor-belt sushi with huge family booths—10 min taxi); 3) <strong>Hyosetsu no Mon Sapporo (氷雪の門)</strong> (Historic King Crab banquet in private suites, Phone: +81 11-521-3046); 4) <strong>Butadon Ippin (豚丼いっぴん Stellar Place 6F)</strong> (Charcoal-grilled Tokachi sweet soy pork rice bowls—kids love the sweet tare glaze!).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> At Hanamaru/Toriton, order from the touchscreen: <em>Tamago</em> (sweet omelet), <em>Inari</em> (sweet tofu rice pockets), <em>Ebi</em> (boiled shrimp), <em>Aburi Salmon/Beef</em> (seared/cooked), <em>Kani Jiru</em> (crab soup), udon, and French fries!"
     },
     weatherStrategy: "Coolest Day Alert (13°C / 55°F): Tuesday brings a crisp northern temperature dip. Dress everyone in the full 3-layer system (Heattech + Fleece + Packable Down) and wrap Kayden in his fleece stroller blanket & beanie for the morning park/sheep hill visit, then spend the afternoon inside heated arcades and department stores.",
     pregnancyTip: "Keep your 2-day carry-on duffle bag with you tonight—your large forwarded suitcases will meet you in Kyoto on Thursday, Oct 22.",
@@ -87,8 +95,10 @@ const itineraryData = [
     afternoon: "3:10 PM: Japan Airlines Flight JL 2008 departs CTS for Osaka Itami (ITM), landing at 5:05 PM. Walk straight outside baggage claim to Airport Limousine Bus Stop #15 (55-minute direct highway coach to Kyoto Station).",
     evening: "6:15 PM: Limousine Bus drops off at Kyoto Station Hachijo Exit (South Side). Walk 4 minutes on flat pavement (350m) down Muromachi-dori into KotoStay 京粋庵 2BR Private Suite (Conf: HMRQJQQTC3).",
     dining: {
-      lunch: "Hokkaido Ramen Dojo at CTS Airport Domestic 3F (Ebisoba Ichigen or Keyaki miso ramen).",
-      dinner: "Katsukura Kyoto Station (The Cube 11F / Porta B1 — Tender pork tenderloin tonkatsu & barley rice) OR Shozankaku (JR Kyoto Isetan 11F)."
+      breakfast: "<strong>Sapporo Station Bakery (Little Mermaid or Sandria)</strong> + grab extra Hokkaido milk & snacks for the airport train.",
+      lunch: "<strong>New Chitose Airport (CTS Domestic 3F — World-Class Dining):</strong> 1) <strong>Hokkaido Ramen Dojo (北海道ラーメン道場)</strong> (10 famous ramen shops including Ebisoba Ichigen & Keyaki butter-corn miso ramen with open family tables); 2) <strong>Drive-In Yoshimi (ドライブインいとう)</strong> (Sweet-soy roasted pork bowls & kids plates with zero line); 3) <strong>Kantaro Gourmet Kaitenzushi (函太郎 3F)</strong> (Booth seating overlooking the runway—Kayden can watch jets take off while eating!).",
+      dinner: "<strong>Kyoto Station (4-Min Flat Walk from KotoStay):</strong> 1) <strong>Katsukura Tonkatsu (名代とんかつ かつくら The Cube 11F)</strong> (Tender pork/shrimp cutlets & barley rice; kids get a mini mortar & pestle to grind sesame seeds!); 2) <strong>Kyoto Ramen Koji (京都拉麺小路 10F)</strong> (9 famous regional ramen shops on one stroller-friendly floor); 3) <strong>Tagoto or Matsubaya (Kyoto Porta B1F)</strong> (Soothing warm Kyoto yuba/duck udon & tempura bowls); 4) <strong>Isetan B1F Depachika Takeout Feast</strong> (Bring roast wagyu bento boxes, dashimaki egg rolls & strawberries back to your private KotoStay dining table!).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> At Katsukura, order the <em>Hire-katsu</em> (ultra-tender lean pork tenderloin—easy for toddlers to chew), miso soup, and unlimited barley rice."
     },
     weatherStrategy: "Two-Climate Transition Day: Peel off your heavy Hokkaido layers before landing in Osaka/Kyoto—temperatures jump from 59°F in Sapporo to a pleasant 73°F in Kyoto!",
     transit: "The Itami Airport Limousine Bus stows your stroller and carry-on duffles underneath the coach—zero train transfers or station stairs!"
@@ -102,8 +112,10 @@ const itineraryData = [
     afternoon: "1:30 PM – 3:30 PM: Stroller-nap under the weeping cherry trees in flat Maruyama Park while Maria rests at Kasagiya (traditional 1914 teahouse) with warm hojicha tea & sweet red bean botamochi.",
     evening: "4:30 PM: Stroll the lantern-lit Gion Shirakawa Canal. Your forwarded suitcases from Sapporo arrive at KotoStay today!",
     dining: {
-      lunch: "Hisago (Famous fluffy Oyako-don chicken & egg rice bowl; arrive at 11:15 AM opening) OR Junsei Okabeya (Simmered Yudofu tofu hotpot in a tranquil garden).",
-      dinner: "Gion Tanto (Teppanyaki okonomiyaki & yakisoba beside Shirakawa Canal) OR Gion Karyo (Seasonal Kyoto Kaiseki with private room option)."
+      breakfast: "<strong>Inoda Coffee or Ogawa Coffee (Kyoto Station)</strong> (Classic Kyoto morning toast sets, scrambled eggs, bacon & fruit) OR <strong>Sizuya Bakery (志津屋)</strong> (Famous <em>Katsu-sando</em> & fluffy <em>Karne</em> butter rolls).",
+      lunch: "1) <strong>Okabeya (おかべ家 near Kiyomizu-dera)</strong> (Spacious 200-seat hall serving warm <em>Yudofu</em> simmered tofu hotpot, crispy vegetable tempura & rice—zero cramped counter stress!); 2) <strong>Hisago (ひさご) or Kodaiji Hashiba</strong> (Fluffy <em>Oyako-don</em> chicken & cooked egg rice bowl + warm udon at the bottom of Ninenzaka); 3) <strong>Sodoh Higashiyama Kyoto</strong> (Gorgeous garden villa serving brick-oven Margherita pizza & pasta—reserve or walk in at 11:30 AM).",
+      dinner: "1) <strong>Gion Tanto (祇園たんと) or Donguri (どんぐり)</strong> (Savory Kyoto okonomiyaki pancakes, yakisoba noodles & teppanyaki beef/corn); 2) <strong>Gion Karyo (祇園かりょう) or Roan Kikunoi</strong> (Approachable seasonal Kyoto Kaiseki with private table rooms); 3) <strong>Gyoza Hohei (ぎょうざ歩兵 Gion)</strong> (Famous bite-sized crispy ginger gyoza dumplings & white rice); 4) <strong>Kyoto Station 11F Restaurant Floor</strong> (If returning early before James leaves for the Kurama Fire Festival!).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> <em>Oyako-don</em> (request egg cooked firm: <em>'Tamago yoku-yaki'</em>), warm udon noodles, simmered silky tofu, or sweet-sauce <em>Yakisoba</em> noodles."
     },
     weatherStrategy: "☀️ Crisp, sunny 72°F autumn weather! 🎉 Festival Traffic Advisory: Oct 22 is Kyoto's Jidai Matsuri—central streets (Oike & Kawaramachi) close to buses/taxis between 11:30 AM and 3:00 PM, while your pedestrian Higashiyama & Maruyama Park route remains 100% open.",
     additionalOptions: "⚔️ <strong>Jidai Matsuri Samurai Parade (2:00 PM – 2:30 PM at Heian Shrine):</strong> Walk 10 mins flat north from Maruyama Park along wide Jingu-michi to watch 2,000 participants dressed as samurai warriors, shoguns on horseback, and Heian nobles arrive at Heian Shrine!<br>🔥 <strong>James's Solo Night Quest — Kurama Fire Festival (Kurama-no-Hi Matsuri, 6:00 PM – 9:30 PM):</strong> Held once a year on Oct 22 up in the mountain village of Kurama (30-min Eizan Railway ride from Demachiyanagi Station). Locals carry massive 100-kg flaming pine torches through narrow village streets! <em>(Skip for Maria & Kayden due to heavy train crowds & flying sparks, but an unforgettable solo evening adventure for James after dinner!)</em>",
@@ -118,8 +130,10 @@ const itineraryData = [
     afternoon: "1:30 PM – 3:30 PM: Wheel Kayden along the level Katsura River promenade by Togetsukyo Bridge. Stop at CHAVATY Kyoto Arashiyama for roasted hojicha tea lattes & warm scones while Kayden naps.",
     evening: "4:30 PM: Take the JR train to Fushimi Inari Taisha (5 mins from Kyoto Station). Walk only the flat, paved lower Senbon Torii loop (15–20 mins) illuminated at dusk—skip the steep mountain stairs!",
     dining: {
-      lunch: "Yoshiya Arashiyama (Spacious family dining by Togetsukyo Bridge) OR Shigetsu (Inside Tenryu-ji Zen Garden).",
-      dinner: "Moritaya JR Kyoto Isetan 11F (Kuroge Wagyu sukiyaki overlooking Kyoto Tower; request well-done egg for Maria) OR Nishiki Warai (Kyoto Station 11F)."
+      breakfast: "<strong>Shinshindo Bakery (進々堂 Kyoto Station)</strong> (French brioche toast, scrambled eggs, yogurt & hot cocoa) OR heat pastries in your KotoStay kitchen.",
+      lunch: "1) <strong>Arashiyama Yoshiya (良彌) or Sagano Tofu Ine (嵯峨野とうふ 稲)</strong> (Spacious 2-story family dining right by Tenryu-ji & Togetsukyo Bridge—creamy yuba tofu skin, tempura, udon & beef sets); 2) <strong>Arashiyama Yoshimura (嵐山よしむら)</strong> (Handmade buckwheat soba overlooking the river); 3) <strong>Bread, Espresso & Arashiyama Garden</strong> (200-year-old farmhouse cafe with a garden lawn—warm French toast, paninis & decaf lattes).",
+      dinner: "1) <strong>Moritaya JR Kyoto Isetan 11F (モリタ屋)</strong> (150-year-old Kuroge Wagyu sukiyaki & shabu-shabu overlooking Kyoto Tower; Phone: +81 75-365-7788); 2) <strong>Nishiki Warai (錦わらい Kyoto Station 11F)</strong> (Casual spacious booths right next door on 11F—Kyoto okonomiyaki, yakisoba & teppanyaki); 3) <strong>Wakana / Kyoto Isetan 10F–11F Dining Floor</strong> (20+ spacious restaurants on the same floor with high chairs & baby lounge).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> In Moritaya's sweet soy-mirin sukiyaki pot, simmer the thick wheat udon noodles, tofu, carrots, and tender Wagyu slices (skip the raw egg dip for Maria & Kayden!)."
     },
     weatherStrategy: "Sunny 72°F afternoon with a cool 57°F breeze in the Hozugawa river canyon—bring a light cardigan or windbreaker for the open-air Sagano Romantic Train.",
     transit: "JR San-in Line (Platform 32/33 at Kyoto Station) is level-entry with zero steps.",
@@ -134,8 +148,10 @@ const itineraryData = [
     afternoon: "Transfer at Shin-Yokohama via station elevators to JR Yokohama Line (12 mins to Yokohama) ➔ JR Yokosuka Line (25 mins to Kamakura). Exit Kamakura Station West Exit (Onari Exit) and walk 60 seconds flat into KAMAKURA HOTEL!",
     evening: "4:30 PM: Relax in the hotel's complimentary green-tea lounge, then stroll quiet Onarimachi boutiques and Komachi-dori pedestrian street. Pick up iconic Toshimaya Hato Sablé dove shortbread cookies.",
     dining: {
-      lunch: "Gourmet Kyoto Ekiben bento boxes aboard the Shinkansen bullet train.",
-      dinner: "Kamakura Matsubara-an (70-year-old seaside wooden villa serving handmade duck soba & crispy tempura; Phone: +81 467-61-3838) OR Kamakura Akimoto (Station Square)."
+      breakfast: "<strong>Kyoto Station Hachijo Exit Cafes (Hoshino Coffee or Manneken Belgian Waffles)</strong> right along your 4-minute walk to the Shinkansen gates.",
+      lunch: "<strong>Gourmet Shinkansen Ekiben Feast (Buy inside Kyoto Station 'Ekiben Nigiwai' before boarding):</strong> 1) <strong>Shinkansen Bullet Train Ceramic Bento</strong> (Shaped like a real bullet train—Kayden keeps the ceramic train box!); 2) <strong>Kobe/Kyoto Wagyu Sukiyaki Bento</strong> (Pull the string to self-heat the beef & rice steaming hot at your seat!); 3) <strong>Kyoto Dashimaki Egg & Chicken Bento</strong>.",
+      dinner: "1) <strong>Kamakura Matsubara-an (鎌倉 松原庵)</strong> (70-year-old seaside wooden villa serving handmade duck soba, fluffy rolled omelet & crispy tempura; Phone: +81 467-61-3838); 2) <strong>Garden House Kamakura (ガーデンハウス鎌倉)</strong> (Literally 2 mins from your hotel! Spacious booths & garden terrace serving wood-fired pizza, roast chicken, fries & craft beer); 3) <strong>Kamakura Akimoto (鎌倉 秋本)</strong> (Right at Kamakura Station Square—elevator access, wide tables, crispy tempura & cooked Shirasu bowls).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> At Matsubara-an, order <em>Dashimaki Tamago</em> (warm rolled egg), <em>Tempura Seiro</em> (shrimp & sweet vegetable tempura with soba), or Garden House's Margherita pizza & fries."
     },
     transit: "At KAMAKURA HOTEL check-in, present both consecutive booking confirmations (Oct 24–25 & Oct 25–27, Conf: 1032548490) so the front desk links your rooms for all 3 nights."
   },
@@ -148,8 +164,10 @@ const itineraryData = [
     afternoon: "1:30 PM – 3:30 PM: Wheel the stroller along the smooth paved Yuigahama Beach boardwalk while ocean breezes rock Kayden to sleep. Maria relaxes on the oceanfront terrace at Amalfi Caffè.",
     evening: "4:30 PM: Ride the scenic coastal Enoden tram along Shichirigahama at golden hour, watching the sun set behind Mount Fuji across Sagami Bay.",
     dining: {
-      lunch: "Kaikoan (Ocean-view temple cafe inside Hase-dera serving vegetarian curry & noodles) OR Woof Curry (Slow-simmered beef curry in Hase).",
-      dinner: "Bills Shichirigahama (Oceanfront terrace serving ricotta hotcakes, Wagyu burgers & pasta) OR Pacific DRIVE-IN (Hawaiian-Japanese coastal plates)."
+      breakfast: "<strong>KAMAKURA HOTEL Hot Breakfast Onigiri Set</strong> (Warm miso soup & freshly made rice balls) OR <strong>Garden House Kamakura (2 mins walk)</strong> for buttermilk pancakes, eggs & coffee.",
+      lunch: "1) <strong>Kaikoan (海光庵 inside Hase-dera)</strong> (Panoramic ocean-view temple cafe serving mild temple curry, udon noodles & sweet sesame団子 dango); 2) <strong>Woof Curry (ウーフカレー Hase)</strong> (Cozy 2-story house near the Great Buddha serving slow-simmered beef/pork/veggie curry & kids mild plates); 3) <strong>Cafe Luonto or Daisy's Cafe (Hase)</strong> (Casual sandwiches, pancakes & pasta steps from the Buddha).",
+      dinner: "1) <strong>Bills Shichirigahama (ビルズ 七里ヶ浜)</strong> (Iconic oceanfront terrace & booths—world-famous fluffy ricotta hotcakes with banana & honeycomb butter, Wagyu burgers, fish & chips, and pasta); 2) <strong>Amalfi Della Sera (アマルフィイ デラセーラ)</strong> (Cliffside coastal Italian serving brick-oven pizza & fresh Shonan pasta); 3) <strong>Pacific DRIVE-IN</strong> (Casual Hawaiian-Japanese plates, garlic shrimp, loco moco & fries right on the beach).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> Bills' fluffy <em>Ricotta Hotcakes</em>, kids Wagyu cheeseburger with fries, or creamy chicken/mushroom pasta—guaranteed toddler crowd-pleasers!"
     },
     additionalOptions: "🕯️ <strong>Shonan Candle 2026 at Enoshima Sea Candle (5:00 PM – 9:00 PM):</strong> Over 10,000 hand-lit candles illuminate the oceanfront Samuel Cocking Botanical Garden at the end of the Enoden tram line (¥500 entry). <strong>Stair-Free Escalator Hack:</strong> Skip the island stairs by taking the <strong>Enoshima Escar (江の島エスカー, ¥360)</strong>—4 covered outdoor escalators that carry you straight up the cliff (just fold Kayden's stroller for 4 minutes on the escalator; the garden and lighthouse elevator at the top are 100% flat!).",
     pregnancyTip: "If visiting Enoshima for the candle illumination, always use the Enoshima Escar outdoor escalators so Maria never climbs the cliff steps."
@@ -163,8 +181,10 @@ const itineraryData = [
     afternoon: "1:30 PM – 3:30 PM: Sip ceremonial matcha in Hokokuji's open-air wooden teahouse overlooking the bamboo forest, then return to Onarimachi for Kayden's afternoon nap.",
     evening: "4:30 PM: Final souvenir stroll along Komachi-dori & Onarimachi. Pack main suitcases so Tuesday morning is completely unhurried.",
     dining: {
-      lunch: "Kamakura Beniya Kurumicco (Buy boxes before 10:30 AM!) + lunch at Dankazura Kosuzu (Handmade soba & warabi mochi) OR Hachinoki (Kita-Kamakura Kaiseki).",
-      dinner: "IL BIRRAIO Kamakura (Warm neighborhood Italian trattoria with fresh handmade Shonan pasta—a great toddler & family favorite) OR Ramen HANABI."
+      breakfast: "<strong>Kibiyabakery (キビヤベーカリー Onarimachi)</strong> OR <strong>Chabakka Tea Parks / Verve Coffee Roasters Kamakura</strong> (1–2 mins from hotel; waffles, avocado toast & decaf lattes).",
+      lunch: "1) <strong>Dankazura Kosuzu (段葛 こ寿々)</strong> (Historic timber shop right on the shrine path serving handmade soba noodles, udon & famous brown-sugar <em>Warabi Mochi</em>); 2) <strong>Oxymoron Onari (オクシモロン オナリ)</strong> (1 min from your hotel—mild Japanese keema curry, sweet custard pudding & toddler-friendly booths); 3) <strong>Caraway (キャラウェイ) or Giraffa Curry Bread</strong> (Legendary mild Japanese cheese/beef curry rice with huge portions).",
+      dinner: "1) <strong>IL BIRRAIO Kamakura (イル・ビッライオ)</strong> (Warm neighborhood Italian trattoria 3 mins from your hotel—fresh handmade Shonan pasta, braised meats & tiramisu); 2) <strong>Garden House Kamakura</strong> (Spacious garden/indoor booths 2 mins from hotel—wood-fired pizza, roast chicken & salads); 3) <strong>AWkitchen Garden Kamakura</strong> (Right on Onarimachi with a private garden & train view—farm-to-table pasta, pizza & kids plates watching the Enoden tram roll right past the patio!).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> AWkitchen's fresh tomato/bolognese pasta (while watching the green Enoden train pass right outside the fence!) or IL BIRRAIO's handmade gnocchi & bread."
     },
     weatherStrategy: "Mild 68°F coastal autumn day with a small chance of a brief passing sprinkle—keep a compact umbrella in the stroller basket.",
     additionalOptions: "🕯️ <strong>Shonan Candle 2026 (Quiet Weekday Evening Option, 5:00 PM – 8:00 PM):</strong> Monday night has significantly lighter crowds than Sunday if you want to ride the Enoden tram down to Enoshima and take the stair-free <em>Enoshima Escar</em> escalator up to see the 10,000 oceanfront candles!"
@@ -178,8 +198,10 @@ const itineraryData = [
     afternoon: "1:30 PM: Retrieve bags and walk 60 seconds into Kamakura Station. Take JR Yokosuka Line to Yokohama Station (25 mins) ➔ transfer via elevator to YCAT Keikyu Airport Limousine Bus direct to Haneda Terminal 3 (30 mins). Arrive at 3:30 PM.",
     evening: "6:25 PM: ANA Flight NH 7010 / UA 876 departs Haneda for SFO (lands at 12:15 PM same calendar day, Tue Oct 27!). Kumi & James connect to Southwest Flight WN 2791 (SFO 3:50 PM ➔ LAX 5:15 PM).",
     dining: {
-      lunch: "Cafe Vivement Dimanche (Famous Kamakura waffles) OR Kua'Aina Kamakura (Avocado burgers & fries).",
-      dinner: "Haneda Terminal 3 Edo Koji dining promenade + International in-flight dinner service."
+      breakfast: "<strong>Cafe Vivement Dimanche (カフェ・ヴィヴモン・ディモンシュ)</strong> (2 mins from hotel—famous crispy fresh-baked waffles with whipped butter/caramel & decaf coffee).",
+      lunch: "1) <strong>Kua'Aina Kamakura (クア・アイナ)</strong> (Right by Kamakura Station—juicy avocado cheddar burgers, crispy shoestring fries & kids sets); 2) <strong>Chaya Karinkorin or Komachi-dori Street Snacks</strong> (Warm sweet potato croquettes, grilled dango & tamagoyaki skewers); 3) <strong>CIAO / Yokohama Porta (If eating during Yokohama transfer)</strong>.",
+      dinner: "<strong>Haneda Terminal 3 'Edo Koji' (4F Pre-Security Dining Promenade — Wide Stroller Aisles):</strong> 1) <strong>Tsurutontan Udon (つるとんたん)</strong> (Famous giant wooden bowls of gourmet udon noodles—toddler heaven before the 11h flight!); 2) <strong>Katsusen Tonkatsu (かつ仙)</strong> (Crispy pork tenderloin cutlets & rice); 3) <strong>Setagaya Ramen or Mos Burger</strong> + International In-Flight Dinner Service.",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> Stop at <em>Tsurutontan</em> on Haneda T3 4F around 4:15 PM so Kayden has a full belly of warm udon noodles right before boarding—he will fall asleep much faster after takeoff!"
     },
     pregnancyTip: "Put Maria's compression socks on before leaving Kamakura, and ensure all power banks are in your under-seat personal bags (not checked bags or overhead bins) before checking suitcases at Haneda."
   }
@@ -245,9 +267,11 @@ function renderItinerary(filterDay) {
         </div>
 
         <div class="dining-options">
-          <div class="dining-title">Curated Family Dining</div>
-          <div class="dining-item"><strong>Lunch:</strong> ${d.dining.lunch}</div>
-          <div class="dining-item"><strong>Dinner:</strong> ${d.dining.dinner}</div>
+          <div class="dining-title">🍽️ Curated Family Dining & Multi-Option Backups</div>
+          ${d.dining.breakfast ? `<div class="dining-item"><strong>☀️ Breakfast:</strong> ${d.dining.breakfast}</div>` : ""}
+          <div class="dining-item"><strong>🍱 Lunch Options:</strong> ${d.dining.lunch}</div>
+          <div class="dining-item"><strong>🌙 Dinner Options:</strong> ${d.dining.dinner}</div>
+          ${d.dining.kidSafeOrder ? `<div class="dining-item dining-kid-note">${d.dining.kidSafeOrder}</div>` : ""}
         </div>
 
         ${d.weatherStrategy ? `

@@ -514,6 +514,18 @@ body {
   color: var(--text-main);
 }
 
+.dining-kid-note {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border-color);
+  color: #065f46;
+  font-size: 0.81rem;
+}
+
+.dining-kid-note strong {
+  color: #047857;
+}
+
 .transit-directive {
   background: var(--accent-green-bg);
   border: 1px solid var(--accent-green-border);
@@ -1043,6 +1055,209 @@ body {
   color: var(--accent-blue);
   font-weight: 600;
   text-decoration: none;
+}
+
+/* ==================== MASTER DINING PLAYBOOK & DIRECTORY ==================== */
+.dining-playbook-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-green);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.playbook-header {
+  margin-bottom: 16px;
+}
+
+.playbook-badge {
+  display: inline-block;
+  background: var(--accent-green-bg);
+  color: #065f46;
+  border: 1px solid var(--accent-green-border);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.playbook-header h3 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.playbook-header p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.playbook-rules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 700px) {
+  .playbook-rules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.playbook-rule {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.rule-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--navy-900);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.rule-body strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.rule-body p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.48;
+}
+
+.dining-section-header {
+  margin: 28px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.dining-section-header h3 {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--navy-900);
+}
+
+.dining-section-header p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.restaurant-directory-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 720px) {
+  .restaurant-directory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rest-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rest-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rest-seat-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.rest-seat-badge.private {
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #ddd6fe;
+}
+
+.rest-seat-badge.booth {
+  background: var(--accent-blue-bg);
+  color: #1e40af;
+  border: 1px solid var(--accent-blue-border);
+}
+
+.rest-seat-badge.walkin {
+  background: var(--accent-green-bg);
+  color: #065f46;
+  border: 1px solid var(--accent-green-border);
+}
+
+.rest-area-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.rest-card h4 {
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.rest-card p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.46;
+}
+
+.rest-card .rest-kid {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #14532d;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+.rest-card .map-link {
+  margin-top: 4px;
+  align-self: flex-start;
 }
 
 /* ==================== WEATHER & TWO-CLIMATE PACKING ==================== */
