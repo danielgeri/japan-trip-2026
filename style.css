@@ -638,6 +638,16 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.phrase-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #93c5fd;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 .jp-text {
   font-size: 1.1rem;
   font-weight: 700;
