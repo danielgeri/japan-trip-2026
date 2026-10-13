@@ -29,10 +29,10 @@
   <header class="app-header">
     <div class="header-inner">
       <div class="brand">
-        <span class="flag-icon">🇯🇵</span>
+        <div class="brand-monogram">JP<span>26</span></div>
         <div>
-          <h1>Japan 2026</h1>
-          <p class="subtitle">Oct 15 – Oct 27 • 5 Travelers</p>
+          <h1>Geri Family Japan Guide</h1>
+          <p class="subtitle">Oct 15 – Oct 27, 2026 • Sapporo · Kyoto · Kamakura • 5 Travelers</p>
         </div>
       </div>
       <div class="header-actions">
@@ -41,20 +41,20 @@
           <span>Install App</span>
         </button>
         <a href="https://wanderlog.com/plan/hadwlxzvodxppfsw" target="_blank" rel="noopener" class="wanderlog-pill">
-          <span>Open Wanderlog</span> ↗
+          <span>Wanderlog</span> ↗
         </a>
       </div>
     </div>
 
     <!-- Navigation Tabs -->
     <nav class="tab-nav">
-      <button class="nav-tab active" data-tab="itinerary">📅 Itinerary</button>
-      <button class="nav-tab" data-tab="weather">🌤️ Weather & Clothes</button>
-      <button class="nav-tab" data-tab="flight-kit">🎒 Packing & Checklist</button>
-      <button class="nav-tab" data-tab="bookings">✈️ Bookings</button>
-      <button class="nav-tab" data-tab="family-guide">👶 Maria & Kayden</button>
-      <button class="nav-tab" data-tab="shopping">🛍️ Snacks & Gifts</button>
-      <button class="nav-tab" data-tab="reservations">🍽️ Reservations</button>
+      <button class="nav-tab active" data-tab="itinerary">Itinerary</button>
+      <button class="nav-tab" data-tab="weather">Weather &amp; Wardrobe</button>
+      <button class="nav-tab" data-tab="flight-kit">Packing &amp; Checklist</button>
+      <button class="nav-tab" data-tab="bookings">Flights &amp; Hotels</button>
+      <button class="nav-tab" data-tab="family-guide">Maria &amp; Kayden</button>
+      <button class="nav-tab" data-tab="shopping">Omiyage Guide</button>
+      <button class="nav-tab" data-tab="reservations">Reservations</button>
     </nav>
   </header>
 
@@ -63,8 +63,8 @@
     <div class="update-toast-content">
       <span class="update-icon">✨</span>
       <div class="update-text">
-        <strong>Trip Guide Updated!</strong>
-        <span>New itinerary & packing details are ready.</span>
+        <strong>Trip Guide Updated</strong>
+        <span>Latest weather, schedule &amp; checklist changes ready.</span>
       </div>
     </div>
     <div class="update-actions">
@@ -76,9 +76,33 @@
   <main class="main-content">
 
     <section id="tab-itinerary" class="tab-pane active">
+      <!-- 4-Leg Executive Route Summary Strip -->
+      <div class="route-summary-strip">
+        <div class="route-leg-pill">
+          <span class="leg-dates">Oct 15 – 17 • Leg 1</span>
+          <span class="leg-city">SFO ➔ Haneda ➔ CTS</span>
+          <span class="leg-meta">NH 7011 &amp; JL 525 • All 5 Confirmed</span>
+        </div>
+        <div class="route-leg-pill">
+          <span class="leg-dates">Oct 17 – 21 • 4 Nights</span>
+          <span class="leg-city">Sapporo &amp; Otaru</span>
+          <span class="leg-meta">JR Tower Hotel Nikko • 2 Rooms</span>
+        </div>
+        <div class="route-leg-pill">
+          <span class="leg-dates">Oct 21 – 24 • 3 Nights</span>
+          <span class="leg-city">Kyoto &amp; Arashiyama</span>
+          <span class="leg-meta">KotoStay 京粋庵 • 2BR Suite</span>
+        </div>
+        <div class="route-leg-pill">
+          <span class="leg-dates">Oct 24 – 27 • 3 Nights</span>
+          <span class="leg-city">Kamakura &amp; Tokyo</span>
+          <span class="leg-meta">KAMAKURA HOTEL • 2 Rooms</span>
+        </div>
+      </div>
+
       <!-- Day Filter Pills -->
       <div class="day-filter-scroll">
-        <button class="day-pill active" data-day="all">All Days</button>
+        <button class="day-pill active" data-day="all">All 12 Days</button>
         <button class="day-pill" data-day="1">Day 1 • Oct 16 (SFO)</button>
         <button class="day-pill" data-day="2">Day 2 • Oct 17 (Sapporo)</button>
         <button class="day-pill" data-day="3">Day 3 • Oct 18 (Sapporo)</button>
@@ -90,7 +114,7 @@
         <button class="day-pill" data-day="9">Day 9 • Oct 24 (Kamakura)</button>
         <button class="day-pill" data-day="10">Day 10 • Oct 25 (Kamakura)</button>
         <button class="day-pill" data-day="11">Day 11 • Oct 26 (Kamakura)</button>
-        <button class="day-pill" data-day="12">Day 12 • Oct 27 (Haneda ➔ SFO)</button>
+        <button class="day-pill" data-day="12">Day 12 • Oct 27 (Return)</button>
       </div>
 
       <div class="itinerary-cards" id="itinerary-container">
@@ -100,15 +124,17 @@
 
     <section id="tab-weather" class="tab-pane">
       <div class="pane-header">
-        <h2>🌤️ Late October Weather & Two-Climate Packing</h2>
-        <p>Hokkaido early chill vs. Kansai & Kanto mild golden autumn: Real forecasts and the modular 3-layer system.</p>
+        <h2>October Weather Forecast &amp; Two-Climate Wardrobe</h2>
+        <p>Updated meteorological outlook for Oct 17–27 across Hokkaido, Kansai, and the Shonan Coast.</p>
       </div>
 
       <!-- Quick Summary Alert -->
       <div class="weather-alert-banner">
-        <div class="alert-icon">💡</div>
+        <div class="alert-icon">🌤️</div>
         <div class="alert-text">
-          <strong>The "Two-Climate" Secret:</strong> Sapporo feels like brisk early winter (4°C–14°C), while Kyoto and Kamakura are mild autumn (18°C–23°C). <em>Don't pack bulky winter parkas!</em> Instead, pack a <strong>Modular 3-Layer System</strong> (Heattech base + fleece/cardigan + ultra-light packable down) that easily rolls up when moving south.
+          <strong>Updated Weather &amp; Schedule Advisory:</strong><br>
+          • <strong>Sapporo (Oct 17–21):</strong> Warmer than average on Sunday Oct 18 (<strong>20°C / 68°F</strong>) with clear morning skies before late-afternoon showers—we shifted Odori Park &amp; TV Tower to midday so you stay dry! Tuesday Oct 20 is the coolest day (<strong>13°C / 55°F</strong>).<br>
+          • <strong>Kyoto &amp; Kamakura (Oct 21–27):</strong> Ideal golden autumn weather with daytime highs of <strong>20°C–23°C (68°F–73°F)</strong> and crisp evenings. Use the <strong>Modular 3-Layer System</strong> so you never overpack bulky coats.
         </div>
       </div>
 
@@ -118,58 +144,58 @@
         <div class="weather-card hokkaido-weather">
           <div class="weather-city-badge">Hokkaido • Oct 17 – 21</div>
           <div class="weather-city-header">
-            <h3>Sapporo & Otaru</h3>
-            <span class="weather-condition-tag cold">❄️ Crisp Early Winter</span>
+            <h3>Sapporo &amp; Otaru</h3>
+            <span class="weather-condition-tag cold">Crisp Northern Autumn</span>
           </div>
           <div class="temp-display">
             <div class="temp-box high">
               <span class="temp-label">Day High</span>
-              <span class="temp-val">11°C – 15°C</span>
-              <span class="temp-f">(52°F – 59°F)</span>
+              <span class="temp-val">13°C – 20°C</span>
+              <span class="temp-f">(55°F – 68°F)</span>
             </div>
             <div class="temp-box low">
               <span class="temp-label">Night Low</span>
-              <span class="temp-val">4°C – 8°C</span>
-              <span class="temp-f">(39°F – 46°F)</span>
+              <span class="temp-val">5°C – 13°C</span>
+              <span class="temp-f">(41°F – 55°F)</span>
             </div>
           </div>
-          <p class="weather-desc">Crisp northern winds, frosty mornings, and brisk nights. Mountain peaks nearby may see early flurries. Feels like November in Chicago or foggy winter in SF.</p>
+          <p class="weather-desc">Mild Sunday (68°F) followed by a brisk northern temperature dip on Tuesday (55°F) and chilly 41°F nights.</p>
 
           <div class="daily-forecast-mini">
-            <div class="forecast-header">📅 5-Day Stay Forecast (Oct 17–21):</div>
+            <div class="forecast-header">5-Day Hokkaido Outlook:</div>
             <div class="forecast-row">
               <span class="f-date">Sat 10/17</span>
-              <span class="f-cond">☁️ 17° / 6°C (63°/43°F)</span>
-              <span class="f-note">Arrive 7 PM to brisk chill</span>
+              <span class="f-cond">🌧️ 17°/5°C (63°/41°F)</span>
+              <span class="f-note">Indoor station transfer</span>
             </div>
             <div class="forecast-row">
               <span class="f-date">Sun 10/18</span>
-              <span class="f-cond">⛅ 17° / 10°C (64°/50°F)</span>
-              <span class="f-note">Crisp sun, TV tower dusk chill</span>
+              <span class="f-cond">⛅ 20°/13°C (68°/55°F)</span>
+              <span class="f-note">Sunny AM; late PM rain</span>
             </div>
             <div class="forecast-row">
               <span class="f-date">Mon 10/19</span>
-              <span class="f-cond">🌥️ 16° / 8°C (61°/46°F)</span>
-              <span class="f-note">Otaru Canal sea breeze</span>
+              <span class="f-cond">🌥️ 18°/8°C (64°/46°F)</span>
+              <span class="f-note">Dry Otaru Canal day</span>
             </div>
             <div class="forecast-row">
               <span class="f-date">Tue 10/20</span>
-              <span class="f-cond">🍂 15° / 7°C (59°/45°F)</span>
-              <span class="f-note">Nakajima foliage; late sprinkles</span>
+              <span class="f-cond">☁️ 13°/9°C (55°/48°F)</span>
+              <span class="f-note">Coolest day; wear 3 layers</span>
             </div>
             <div class="forecast-row">
               <span class="f-date">Wed 10/21</span>
-              <span class="f-cond">🌤️ 15° / 7°C (59°/45°F)</span>
-              <span class="f-note">Fly to warmer Kyoto (21°C/70°F)</span>
+              <span class="f-cond">🌤️ 15°/5°C (59°/41°F)</span>
+              <span class="f-note">Fly to 73°F Kyoto</span>
             </div>
           </div>
 
           <div class="weather-packing-rules">
-            <strong>Must-Packs:</strong>
+            <strong>Essential Layers:</strong>
             <ul>
-              <li>Uniqlo Heattech thermal base layers (tops & bottoms)</li>
-              <li>Fleece zip-up or wool sweater + Packable Down Coat</li>
-              <li>Warm knit beanie covering ears + toddler stroller blanket</li>
+              <li>Uniqlo Heattech thermal base layers (especially Tue 10/20)</li>
+              <li>Fleece zip-up or merino sweater + Packable Down Jacket</li>
+              <li>Warm knit beanie + Kayden's fleece stroller blanket</li>
             </ul>
           </div>
         </div>
@@ -178,28 +204,53 @@
         <div class="weather-card kansai-weather">
           <div class="weather-city-badge">Kansai • Oct 21 – 24</div>
           <div class="weather-city-header">
-            <h3>Kyoto & Arashiyama</h3>
-            <span class="weather-condition-tag mild">🍁 Mild Golden Autumn</span>
+            <h3>Kyoto &amp; Arashiyama</h3>
+            <span class="weather-condition-tag mild">Golden Autumn Sun</span>
           </div>
           <div class="temp-display">
             <div class="temp-box high">
               <span class="temp-label">Day High</span>
-              <span class="temp-val">18°C – 22°C</span>
-              <span class="temp-f">(64°F – 72°F)</span>
+              <span class="temp-val">21°C – 23°C</span>
+              <span class="temp-f">(70°F – 73°F)</span>
             </div>
             <div class="temp-box low">
               <span class="temp-label">Night Low</span>
-              <span class="temp-val">9°C – 13°C</span>
-              <span class="temp-f">(48°F – 55°F)</span>
+              <span class="temp-val">13°C – 15°C</span>
+              <span class="temp-f">(55°F – 59°F)</span>
             </div>
           </div>
-          <p class="weather-desc">Clear, sunny skies, low humidity, and pleasant autumn breezes. Perfect walking weather for temples and gardens. Cooler mornings and evenings.</p>
+          <p class="weather-desc">Sunny, dry, and comfortable daytime conditions for Kiyomizu-dera, Arashiyama Bamboo Grove, and Fushimi Inari.</p>
+
+          <div class="daily-forecast-mini">
+            <div class="forecast-header">4-Day Kyoto Outlook:</div>
+            <div class="forecast-row">
+              <span class="f-date">Wed 10/21</span>
+              <span class="f-cond">🌤️ 23°/15°C (73°/59°F)</span>
+              <span class="f-note">Warm evening arrival</span>
+            </div>
+            <div class="forecast-row">
+              <span class="f-date">Thu 10/22</span>
+              <span class="f-cond">☀️ 22°/13°C (72°/55°F)</span>
+              <span class="f-note">Crisp &amp; clear; Jidai Fest</span>
+            </div>
+            <div class="forecast-row">
+              <span class="f-date">Fri 10/23</span>
+              <span class="f-cond">☀️ 22°/14°C (72°/57°F)</span>
+              <span class="f-note">Ideal Arashiyama weather</span>
+            </div>
+            <div class="forecast-row">
+              <span class="f-date">Sat 10/24</span>
+              <span class="f-cond">⛅ 21°/14°C (70°/57°F)</span>
+              <span class="f-note">Shinkansen to Kamakura</span>
+            </div>
+          </div>
+
           <div class="weather-packing-rules">
-            <strong>Must-Packs:</strong>
+            <strong>Essential Layers:</strong>
             <ul>
-              <li>Daytime: Breathable long-sleeve shirts or light knits</li>
-              <li>Evenings: Medium cardigan, light jacket, or trench coat</li>
-              <li>Supportive, cushioned walking shoes (15,000+ steps/day)</li>
+              <li>Daytime: Breathable long-sleeve shirts or light cotton tees</li>
+              <li>Mornings/Evenings: Light cardigan, overshirt, or windbreaker</li>
+              <li>Broken-in cushioned walking sneakers (12,000+ steps/day)</li>
             </ul>
           </div>
         </div>
@@ -208,28 +259,53 @@
         <div class="weather-card kanto-weather">
           <div class="weather-city-badge">Shonan Coast • Oct 24 – 27</div>
           <div class="weather-city-header">
-            <h3>Kamakura & Tokyo</h3>
-            <span class="weather-condition-tag beach">🌊 Mild Coastal Autumn</span>
+            <h3>Kamakura &amp; Tokyo</h3>
+            <span class="weather-condition-tag beach">Mild Coastal Breeze</span>
           </div>
           <div class="temp-display">
             <div class="temp-box high">
               <span class="temp-label">Day High</span>
-              <span class="temp-val">18°C – 23°C</span>
-              <span class="temp-f">(64°F – 73°F)</span>
+              <span class="temp-val">20°C – 22°C</span>
+              <span class="temp-f">(68°F – 72°F)</span>
             </div>
             <div class="temp-box low">
               <span class="temp-label">Night Low</span>
-              <span class="temp-val">12°C – 16°C</span>
-              <span class="temp-f">(54°F – 61°F)</span>
+              <span class="temp-val">15°C – 16°C</span>
+              <span class="temp-f">(59°F – 61°F)</span>
             </div>
           </div>
-          <p class="weather-desc">Comfortable coastal maritime climate. Sunny daytime strolls along Komachi-dori and mild ocean breezes near Yuigahama beach.</p>
+          <p class="weather-desc">Pleasant maritime climate along Sagami Bay. Mild afternoons for the Great Buddha and Yuigahama Beach boardwalk.</p>
+
+          <div class="daily-forecast-mini">
+            <div class="forecast-header">4-Day Kamakura Outlook:</div>
+            <div class="forecast-row">
+              <span class="f-date">Sat 10/24</span>
+              <span class="f-cond">⛅ 21°/15°C (70°/59°F)</span>
+              <span class="f-note">Mild Komachi-dori stroll</span>
+            </div>
+            <div class="forecast-row">
+              <span class="f-date">Sun 10/25</span>
+              <span class="f-cond">🌤️ 21°/15°C (70°/59°F)</span>
+              <span class="f-note">Clear Enoden &amp; beach view</span>
+            </div>
+            <div class="forecast-row">
+              <span class="f-date">Mon 10/26</span>
+              <span class="f-cond">⛅ 20°/15°C (68°/59°F)</span>
+              <span class="f-note">Hokokuji bamboo grove</span>
+            </div>
+            <div class="forecast-row">
+              <span class="f-date">Tue 10/27</span>
+              <span class="f-cond">🌤️ 21°/16°C (70°/61°F)</span>
+              <span class="f-note">Smooth Haneda departure</span>
+            </div>
+          </div>
+
           <div class="weather-packing-rules">
-            <strong>Must-Packs:</strong>
+            <strong>Essential Layers:</strong>
             <ul>
-              <li>Light layers: Tees, casual shirts, and comfortable chinos</li>
-              <li>Light windbreaker or hoodie for breezy beach strolls</li>
-              <li>Slip-on shoes for frequent shoe removal at temples & ryokan</li>
+              <li>Light layers: Long-sleeve tees, chinos, and light sweaters</li>
+              <li>Light windbreaker or hoodie for coastal evening breezes</li>
+              <li>Slip-on shoes for frequent shoe removal at temples &amp; restaurants</li>
             </ul>
           </div>
         </div>
@@ -237,33 +313,33 @@
 
       <!-- The 3-Layer System Visual Section -->
       <div class="layer-system-card">
-        <h3>🧥 The Modular 3-Layer Strategy</h3>
-        <p class="layer-subtitle">Mix and match to adapt to any temperature without suitcase clutter:</p>
+        <h3>The Modular 3-Layer System</h3>
+        <p class="layer-subtitle">Mix and match these 3 lightweight layers to stay comfortable from 41°F Sapporo nights to 73°F Kyoto afternoons:</p>
         <div class="layer-grid">
           <div class="layer-item">
             <div class="layer-tag l1">Layer 1: Base</div>
-            <h4>Thermal & Moisture</h4>
-            <p><strong>Sapporo:</strong> Uniqlo Heattech (regular or extra warm) tops & leggings.</p>
-            <p><strong>Kyoto/Kamakura:</strong> Soft breathable cotton tees or long-sleeves.</p>
+            <h4>Thermal &amp; Moisture</h4>
+            <p><strong>Sapporo:</strong> Uniqlo Heattech tops &amp; leggings.</p>
+            <p><strong>Kyoto / Kamakura:</strong> Breathable cotton tees or long-sleeves.</p>
           </div>
           <div class="layer-item">
             <div class="layer-tag l2">Layer 2: Mid-Layer</div>
-            <h4>Insulation</h4>
+            <h4>Warmth &amp; Insulation</h4>
             <p>Fleece full-zip, soft knit cardigan, or merino wool sweater.</p>
-            <p><em>Worn as outer jacket in Kyoto; worn under coat in Sapporo.</em></p>
+            <p><em>Worn as outer layer in Kyoto; worn under shell in Sapporo.</em></p>
           </div>
           <div class="layer-item">
             <div class="layer-tag l3">Layer 3: Outer Shell</div>
-            <h4>Wind & Cold Barrier</h4>
-            <p>Ultra-Light Packable Down jacket (rolls into a fist-sized pouch) or water-resistant windbreaker.</p>
-            <p><em>Compresses away to zero luggage volume when moving south!</em></p>
+            <h4>Wind &amp; Rain Barrier</h4>
+            <p>Ultra-Light Packable Down jacket (packs into a small pouch) or water-resistant windbreaker.</p>
+            <p><em>Stows away effortlessly when moving south to Kyoto.</em></p>
           </div>
         </div>
       </div>
 
       <!-- Detailed Clothes Packing List by Traveler -->
       <div class="clothing-breakdown-section">
-        <h3>🎒 Exact Clothing Packing Checklist</h3>
+        <h3>Wardrobe Allocation by Traveler</h3>
         <div class="traveler-clothes-grid">
           <!-- Kayden (Toddler) -->
           <div class="traveler-clothes-card">
@@ -273,14 +349,14 @@
             </div>
             <ul class="clothes-list">
               <li><strong>Tops:</strong> 4–5 long-sleeve cotton shirts / bodysuits (breathable layers)</li>
-              <li><strong>Pants:</strong> 4 pairs stretchy jogger pants (soft elastic waist for diaper access)</li>
-              <li><strong>Warm Mid-Layer:</strong> 1 fleece zip hoodie or cozy sweater</li>
-              <li><strong>Puffer:</strong> 1 lightweight toddler packable down jacket</li>
+              <li><strong>Pants:</strong> 4 pairs stretchy jogger pants (soft elastic waist for quick diaper changes)</li>
+              <li><strong>Warm Mid-Layer:</strong> 1 fleece zip hoodie or cozy pullover sweater</li>
+              <li><strong>Outer Puffer:</strong> 1 lightweight toddler packable down jacket</li>
               <li><strong>Beanie:</strong> 1 warm knit beanie covering ears (for Sapporo evenings)</li>
-              <li><strong>🚨 Stroller Blanket (Crucial):</strong> 1 warm fleece stroller blanket or bunting bag (*toddlers sit motionless and lose body heat much faster than walking adults!*)</li>
-              <li><strong>Stroller Weather Cover:</strong> 1 transparent rain & wind cover</li>
-              <li><strong>Feet:</strong> 5–6 pairs warm socks + 2 pairs broken-in sneakers (1 backup for puddles)</li>
-              <li><strong>Pajamas:</strong> 2–3 cozy 2-piece pajama sets</li>
+              <li><strong>Stroller Blanket (Crucial):</strong> 1 warm fleece stroller blanket or bunting bag <em>(toddlers sit motionless and lose body heat much faster than walking adults)</em></li>
+              <li><strong>Stroller Weather Cover:</strong> 1 clear rain &amp; wind shield (for Sun 10/18 late showers)</li>
+              <li><strong>Footwear:</strong> 5–6 pairs warm socks + 2 pairs Velcro sneakers (1 backup)</li>
+              <li><strong>Sleepwear:</strong> 2–3 cozy 2-piece pajama sets + home sleep sack</li>
             </ul>
           </div>
 
@@ -292,30 +368,30 @@
             </div>
             <ul class="clothes-list">
               <li><strong>Bottoms:</strong> 2–3 pairs over-the-belly stretchy maternity leggings / joggers</li>
-              <li><strong>Tops:</strong> 3–4 comfortable, breathable long-sleeve maternity tops / tunics</li>
+              <li><strong>Tops:</strong> 3–4 breathable long-sleeve maternity tops / tunics</li>
               <li><strong>Thermals:</strong> 1–2 stretchy Heattech long-sleeve tops for Sapporo</li>
-              <li><strong>Cardigan:</strong> 1 soft open knit cardigan / wrap (easy on/off for heated trains)</li>
-              <li><strong>Outerwear:</strong> 1 lightweight packable down coat with belly room</li>
-              <li><strong>🚨 Compression Socks (Must-Pack):</strong> 2–3 pairs graduated compression socks (*wear during all 3 flights to prevent leg swelling & DVT*)</li>
-              <li><strong>Footwear:</strong> 1 pair cushioned, supportive slip-on walking sneakers (feet swell during pregnancy)</li>
-              <li><strong>Support:</strong> Maternity belly band for long temple walks in Kiyomizu-dera</li>
+              <li><strong>Cardigan:</strong> 1 soft open-front knit cardigan / wrap (easy on/off inside heated trains)</li>
+              <li><strong>Outerwear:</strong> 1 lightweight packable down coat with comfortable belly room</li>
+              <li><strong>Compression Socks (Essential):</strong> 2–3 pairs 20–30 mmHg graduated compression socks <em>(wear during all flights to prevent swelling &amp; DVT)</em></li>
+              <li><strong>Footwear:</strong> 1 pair cushioned, supportive slip-on walking sneakers</li>
+              <li><strong>Support:</strong> Maternity belly band for longer temple walks</li>
             </ul>
           </div>
 
           <!-- Adults (Daniel, Kumi, James) -->
           <div class="traveler-clothes-card">
             <div class="traveler-title">
-              <span class="traveler-emoji">👨‍👩‍👦</span>
-              <h4>Daniel, Kumi & James</h4>
+              <span class="traveler-emoji">🧳</span>
+              <h4>Daniel, Kumi &amp; James</h4>
             </div>
             <ul class="clothes-list">
               <li><strong>Tops:</strong> 3–4 long-sleeve shirts + 2–3 breathable short-sleeve tees</li>
-              <li><strong>Pants:</strong> 2 pairs comfortable walking trousers, chinos, or stretch jeans</li>
+              <li><strong>Pants:</strong> 2–3 pairs comfortable walking trousers, chinos, or stretch jeans</li>
               <li><strong>Mid-Layer:</strong> 1 warm fleece jacket or merino wool sweater</li>
               <li><strong>Outerwear:</strong> 1 Ultra-Light Packable Down jacket (rolls into pouch)</li>
-              <li><strong>Base Layers:</strong> 1–2 sets Uniqlo Heattech tops & bottoms for Sapporo</li>
-              <li><strong>Footwear:</strong> 1 pair broken-in supportive walking shoes (wear on plane!)</li>
-              <li><strong>Rain Shell:</strong> 1 compact travel umbrella or lightweight rain jacket</li>
+              <li><strong>Base Layers:</strong> 1–2 sets Uniqlo Heattech tops &amp; bottoms for Sapporo</li>
+              <li><strong>Footwear:</strong> 1 pair broken-in supportive walking shoes (wear on plane)</li>
+              <li><strong>Rain Gear:</strong> 1 compact travel umbrella or water-resistant windbreaker</li>
             </ul>
           </div>
         </div>
@@ -324,8 +400,19 @@
 
     <section id="tab-flight-kit" class="tab-pane">
       <div class="pane-header">
-        <h2>✅ Pre-Flight Chronological Checklist</h2>
-        <p>Follow this exact 4-phase countdown leading up to takeoff. Checkmarks save automatically to your phone!</p>
+        <h2>Pre-Flight Countdown &amp; Master Packing Checklist</h2>
+        <p>Interactive 4-phase departure countdown and luggage checklist. Progress saves automatically on your device.</p>
+      </div>
+
+      <!-- Live Progress Tracker Bar -->
+      <div class="checklist-progress-card">
+        <div class="progress-header-row">
+          <span>Overall Packing &amp; Prep Readiness</span>
+          <span id="checklist-progress-text" class="progress-count">0 of 61 completed (0%)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="checklist-progress-fill" class="progress-bar-fill"></div>
+        </div>
       </div>
 
       <!-- Phase 1 -->
@@ -1222,13 +1309,13 @@
         <!-- Card 4: Toddler Etiquette & Public Manners (Kayden) -->
         <div class="guide-card highlight">
           <div class="card-icon">👶</div>
-          <h3>Toddler Etiquette & Social Grace in Japan (Kayden)</h3>
+          <h3>Toddler Etiquette &amp; Social Grace in Japan (Kayden)</h3>
           <ul>
-            <li><strong>The Core Mindset: "Effort Over Perfection":</strong> Japanese society does not expect a 26-month-old to sit in robotic silence. The social expectation (*Meiwaku*) is simply that <strong>parents show effort</strong>. If Kayden fusses, actively soothing him or giving a polite nod with <em>"Sumimasen"</em> earns instant warmth and respect. Young children are cherished in Japan (<em>Kodomo wa takara</em>).</li>
+            <li><strong>The Core Mindset: "Effort Over Perfection":</strong> Japanese society does not expect a 26-month-old to sit in robotic silence. The social expectation (<em>Meiwaku</em>) is simply that <strong>parents show effort</strong>. If Kayden fusses, actively soothing him or giving a polite nod with <em>"Sumimasen"</em> earns instant warmth and respect. Young children are cherished in Japan (<em>Kodomo wa takara</em>).</li>
             <li><strong>🚆 The Golden Train Seat Rule (No Shoes!):</strong> Toddlers love standing or kneeling on train seats to watch out the window. <strong>Always slip Kayden's shoes off first!</strong> Walking or kneeling on cloth seats with outdoor shoes is a major taboo; doing so in clean socks is 100% accepted and encouraged.</li>
             <li><strong>🚪 The Shinkansen "Deck" Calming Zone:</strong> On bullet trains and JR express trains, never feel trapped in your seat row during a meltdown. Pick Kayden up and step into the <strong>"Deck" (the vestibule area between train cars)</strong>. It is spacious, bright, rumble-cushioned, and the standard haven where Japanese parents soothe toddlers.</li>
-            <li><strong>⛩️ Temples & Shrines:</strong> Gravel pathways, red torii gates, and outdoor gardens are open-air public spaces—Kayden walking, crunching gravel, and looking at koi ponds is completely fine. Inside wooden temple halls (<em>Hondo</em>), remove shoes, hold hands, speak in quiet voices, and avoid touching sacred altars.</li>
-            <li><strong>🚶 Stroller Snacking & Trash Disposal:</strong> Toddlers snacking on crackers or drinking pouches in strollers is totally fine! Keep 1–2 small plastic bags in your stroller basket for wrappers, wipes, and diapers, as public street trash cans are rare.</li>
+            <li><strong>⛩️ Temples &amp; Shrines:</strong> Gravel pathways, red torii gates, and outdoor gardens are open-air public spaces—Kayden walking, crunching gravel, and looking at koi ponds is completely fine. Inside wooden temple halls (<em>Hondo</em>), remove shoes, hold hands, speak in quiet voices, and avoid touching sacred altars.</li>
+            <li><strong>🚶 Stroller Snacking &amp; Trash Disposal:</strong> Toddlers snacking on crackers or drinking pouches in strollers is totally fine! Keep 1–2 small plastic bags in your stroller basket for wrappers, wipes, and diapers, as public street trash cans are rare.</li>
             <li><strong>🗣️ The 3 Magic Disarming Words:</strong>
               <ul>
                 <li><strong>"Sumimasen"</strong> (<em>Soo-mee-mah-sen</em>) = "Excuse me / I'm sorry." (Use if he fusses, drops a toy, or you squeeze a stroller through).</li>
@@ -1242,31 +1329,32 @@
         <!-- Card 5: Toddler Dining Master Guide & Restaurant Flashcards -->
         <div class="guide-card highlight">
           <div class="card-icon">🍜</div>
-          <h3>Toddler Dining Master Guide & Zero-Stress Restaurant Phrases</h3>
+          <h3>Toddler Dining Master Guide &amp; Zero-Stress Restaurant Phrases</h3>
           <p><strong>Why You Don't Need to Worry:</strong> Japan is one of the world's most kid-friendly dining cultures. Casual restaurants, izakayas, and department store dining floors warmly welcome families. Servers will automatically bring out child plastic tableware (<em>Kodomo-yō shokki</em>), water with lids/straws, and high chairs.</p>
           
-          <h4 style="margin: 12px 0 6px; color: var(--navy-800); font-size: 0.95rem;">🏆 Best Restaurant Formats for Kayden:</h4>
+          <h4 class="guide-subhead">Best Restaurant Formats for Kayden</h4>
           <ul>
             <li><strong>Department Store Restaurant Floors (Daimaru Sapporo 8F, JR Stellar Place, JR Kyoto Isetan 10F):</strong> Ultra-spacious, stroller-friendly, high chairs at every restaurant, English menus, and luxury baby changing lounges on the same floor.</li>
             <li><strong>Izakayas (e.g. Aiyo Sapporo):</strong> Japanese casual pubs are family gathering hubs! The lively background chatter naturally drowns out toddler squeals. Private booths and endless toddler finger foods: <em>Yakitori</em> skewers, edamame, french fries, sweet rolled egg (<em>Tamagoyaki</em>), and rice balls (<em>Onigiri</em>).</li>
             <li><strong>Kaitenzushi (Conveyor Belt Sushi - Sushiro, Kura Sushi, Toriton):</strong> Touchscreen ordering, dishes arrive on mini bullet trains, and Kura Sushi's <em>Bikkura-Pon</em> game drops gachapon toys! Lots of cooked toddler options (corn mayo sushi, sweet egg, udon, tempura).</li>
-            <li><strong>Udon & Soba Shops:</strong> Food arrives in under 3 minutes, mild soothing dashi broth, and noodles are the ultimate toddler comfort food.</li>
+            <li><strong>Udon &amp; Soba Shops:</strong> Food arrives in under 3 minutes, mild soothing dashi broth, and noodles are the ultimate toddler comfort food.</li>
             <li><strong>Family Restaurants ("Famiresu" - Royal Host, Gusto):</strong> Wide booths, call buttons on tables, robotic cat servers (<em>BellaBot</em>) delivering food, and <em>Okosama Lunch</em> sets with free toy baskets.</li>
             <li><strong>Private Rooms (Koshitsu):</strong> Already reserved for your Sapporo Crab feast (Kani Shogun) and Kyoto Sukiyaki (Moritaya)—100% private, zero stress!</li>
           </ul>
 
-          <h4 style="margin: 14px 0 6px; color: var(--navy-800); font-size: 0.95rem;">🥢 Table Etiquette & Hacks:</h4>
+          <h4 class="guide-subhead">Table Etiquette, Screen Time &amp; Hacks</h4>
           <ul>
+            <li><strong>Table Screen Time / Videos:</strong> Playing an offline show on your phone to avert a meltdown is 100% accepted—just keep the audio <strong>muted (or on 1-bar whisper)</strong> or use Kayden's volume-limited headphones! In private rooms (<em>Koshitsu</em>), normal volume is fine.</li>
             <li><strong>Outside Toddler Food:</strong> 100% allowed! Giving Kayden a baby food pouch, fruit squeeze, or teething cracker at the table is completely accepted.</li>
             <li><strong>The 10-Second Table Courtesy:</strong> Toddlers drop rice and crackers. Before asking for the check, use a wet wipe (<em>Oshibori</em>) to quickly gather dropped rice from the table or floor. Waitstaff will bow with genuine appreciation!</li>
             <li><strong>Plastic Food / Noodle Shears:</strong> Keep a pair of plastic toddler scissors in your diaper bag. Snapping udon and tempura into 1-inch bite pieces takes 10 seconds and prevents hot soup splashes.</li>
           </ul>
 
-          <h4 style="margin: 16px 0 8px; color: var(--navy-800); font-size: 0.95rem;">📱 Show-Your-Phone Restaurant Phrase Cards (Tap & Show):</h4>
+          <h4 class="guide-subhead">Show-Your-Phone Restaurant Phrase Cards (Tap &amp; Show)</h4>
 
           <!-- Phrase 1: Combined Room & Chair Request -->
           <div class="japanese-phrase-box">
-            <div class="phrase-label">Table Arrival Card (Family with Toddler & Pregnant Guest)</div>
+            <div class="phrase-label">Table Arrival Card (Family with Toddler &amp; Pregnant Guest)</div>
             <p class="jp-text">2歳の子どもと妊婦がいます。個室または落ち着いた席はありますか？子ども用の椅子もお願いします。</p>
             <p class="romaji">"2-sai no kodomo to ninpu ga imasu. Koshitsu matawa ochitsuita seki wa arimasu ka? Kodomo-yō no isu mo onegai shimasu."</p>
             <p class="en-translation">("We have a 2-year-old child and a pregnant guest. Is a private room or quiet booth available? Also a child chair, please.")</p>
@@ -1282,7 +1370,7 @@
 
           <!-- Phrase 3: Child Plastic Tableware -->
           <div class="japanese-phrase-box">
-            <div class="phrase-label">Child Bowls & Utensils Request</div>
+            <div class="phrase-label">Child Bowls &amp; Utensils Request</div>
             <p class="jp-text">子ども用の取り皿とスプーンをいただけますか？</p>
             <p class="romaji">"Kodomo-yō no torizara to supūn o itadakemasu ka?"</p>
             <p class="en-translation">("Could we please have a child's small bowl and spoon?")</p>
@@ -1306,7 +1394,7 @@
 
           <!-- Phrase 6: Departure & Thank You -->
           <div class="japanese-phrase-box">
-            <div class="phrase-label">Departure Courtesy & Appreciation</div>
+            <div class="phrase-label">Departure Courtesy &amp; Appreciation</div>
             <p class="jp-text">ごちそうさまでした！とても美味しかったです。</p>
             <p class="romaji">"Gochisōsama deshita! Totemo oishikatta desu."</p>
             <p class="en-translation">("Thank you for the delicious meal! Everything was wonderful.")</p>
@@ -1316,7 +1404,7 @@
         <!-- Card 6: Toddler Milk, Convenience & Navigation Hacks -->
         <div class="guide-card">
           <div class="card-icon">🍼</div>
-          <h3>Toddler Milk, Daily Conveniences & Navigation Hacks</h3>
+          <h3>Toddler Milk, Daily Conveniences &amp; Navigation Hacks</h3>
           <ul>
             <li><strong>Konbini Whole Milk Decoder:</strong> Japanese cow's milk has many confusing varieties. Look for red cartons marked <strong>成分無調整 (Seibun Muchōsei)</strong>, meaning 100% pure whole milk with nothing added or removed.</li>
             <li><strong>Velcro Shoes Only for Kayden:</strong> Many traditional restaurants (like Kani Shogun crab feast), ryokans, and temple halls require slipping shoes off at the entrance. Never wear lace-up shoes—Velcro slip-ons save you tons of time.</li>
@@ -1326,10 +1414,10 @@
           </ul>
         </div>
 
-        <!-- Card 5: 11-Hour In-Flight Sleep Strategy -->
+        <!-- Card 7: 11-Hour In-Flight Sleep Strategy -->
         <div class="guide-card highlight">
           <div class="card-icon">💤</div>
-          <h3>11-Hour In-Flight Sleep Mastery (Kayden & Maria)</h3>
+          <h3>11-Hour In-Flight Sleep Mastery (Kayden &amp; Maria)</h3>
           
           <div class="tip-box warning" style="margin-bottom: 14px;">
             <strong>🚨 Airline Rule Alert (United Airlines UA 875/876):</strong><br>
@@ -1355,23 +1443,23 @@
             </div>
 
             <div class="sleep-strat-item">
-              <h4>3. Replicating Home Sleep Cues & Darkness Canopy</h4>
+              <h4>3. Replicating Home Sleep Cues &amp; Darkness Canopy</h4>
               <p>Toddlers sleep based on sensory triggers, not logic. After the first meal service (~2 hours in):</p>
               <ul>
                 <li><strong>Change into Night Pajamas:</strong> Take Kayden to the lavatory, change out of daytime clothes into cozy bedtime pajamas, brush teeth, and read his usual bedtime book.</li>
-                <li><strong>Unwashed Sleep Sack & Stuffed Animal:</strong> Bring the exact sleep sack he uses at home (unwashed so it smells like his crib) and his favorite bedtime toy.</li>
+                <li><strong>Unwashed Sleep Sack &amp; Stuffed Animal:</strong> Bring the exact sleep sack he uses at home (unwashed so it smells like his crib) and his favorite bedtime toy.</li>
                 <li><strong>The "Muslin Sleep Canopy":</strong> Daytime flights have bright screens and cabin lights. Use 2 magnetic hooks or small plastic clips to drape a lightweight, breathable muslin swaddle blanket from the seat headrest down to create a dark, quiet "sleeping tent."</li>
                 <li><strong>White Noise Loop:</strong> Put on his volume-limited headphones with a continuous rain sound or lullaby loop to block out sudden captain announcements and galley clatter.</li>
               </ul>
             </div>
 
             <div class="sleep-strat-item">
-              <h4>4. Maria's Pregnancy In-Flight Comfort & Rest (5 Months)</h4>
+              <h4>4. Maria's Pregnancy In-Flight Comfort &amp; Rest (5 Months)</h4>
               <ul>
                 <li><strong>Aisle Seat Priority:</strong> Maria must have an aisle seat to stretch her legs and visit the restroom without asking anyone to move.</li>
                 <li><strong>Inflatable Lumbar Cushion:</strong> Airplane economy seats have zero lumbar support. A small inflatable lumbar pillow prevents lower back spasms and sciatic nerve pain.</li>
                 <li><strong>Under-Seat Foot Rest:</strong> Resting her feet on top of her personal bag under the seat elevates knees and relieves pelvic pressure.</li>
-                <li><strong>Compression Socks & Hydration:</strong> Wear 20–30 mmHg graduated compression socks and sip non-caffeinated Mugi-cha or water every hour.</li>
+                <li><strong>Compression Socks &amp; Hydration:</strong> Wear 20–30 mmHg graduated compression socks and sip non-caffeinated Mugi-cha or water every hour.</li>
               </ul>
             </div>
 
@@ -1379,9 +1467,9 @@
               <h4>5. The 5-Adult "Tag-Team Sleep Shift" Rotation</h4>
               <p>With 4 adults (Daniel, Maria, Kumi, James) and 1 toddler, establish structured shifts so Maria is never overwhelmed:</p>
               <ul>
-                <li><strong>Hours 1–4 (Takeoff & Meal):</strong> Daniel & Maria handle initial settling, mealtime, and bedtime routine.</li>
-                <li><strong>Hours 4–8 (Cruising & Maria's Deep Sleep):</strong> Kumi & James take primary watch. Maria puts on eye mask and noise-canceling earplugs for <strong>4 hours of uninterrupted sleep</strong>.</li>
-                <li><strong>Hours 8–11 (Descent & Wakeup):</strong> Daniel takes over for breakfast service and landing prep.</li>
+                <li><strong>Hours 1–4 (Takeoff &amp; Meal):</strong> Daniel &amp; Maria handle initial settling, mealtime, and bedtime routine.</li>
+                <li><strong>Hours 4–8 (Cruising &amp; Maria's Deep Sleep):</strong> Kumi &amp; James take primary watch. Maria puts on eye mask and noise-canceling earplugs for <strong>4 hours of uninterrupted sleep</strong>.</li>
+                <li><strong>Hours 8–11 (Descent &amp; Wakeup):</strong> Daniel takes over for breakfast service and landing prep.</li>
               </ul>
             </div>
           </div>
@@ -1391,8 +1479,8 @@
 
     <section id="tab-shopping" class="tab-pane">
       <div class="pane-header">
-        <h2>Japanese Regional Snack & Gift Guide</h2>
-        <p>Curated omiyage specialties to bring back for family, friends, and coworkers.</p>
+        <h2>Regional Omiyage &amp; Specialty Gift Guide</h2>
+        <p>Curated regional delicacies and gifts sorted by city, with exact purchase locations.</p>
       </div>
 
       <div class="omiyage-grid">
@@ -1408,10 +1496,10 @@
         <!-- Item 2: Royce' Nama Chocolate -->
         <div class="omiyage-card">
           <div class="region-tag hokkaido">Hokkaido</div>
-          <h3>Nama Chocolate & Choco Chips</h3>
+          <h3>Nama Chocolate &amp; Choco Chips</h3>
           <p class="brand">ROYCE'</p>
           <p class="desc">Rich, melt-in-the-mouth fresh ganache squares dusted with cocoa; salty crinkle potato chips dipped in milk chocolate.</p>
-          <p class="where">📍 CTS Airport Departure Gates *(Buy with thermal cold pouch!)*</p>
+          <p class="where">📍 CTS Airport Departure Gates <em>(Ask for insulated cold pack)</em></p>
         </div>
 
         <!-- Item 3: Jaga Pokkuru -->
@@ -1420,7 +1508,7 @@
           <h3>Jaga Pokkuru (じゃがポックル)</h3>
           <p class="brand">Calbee Potato Farm</p>
           <p class="desc">Addictively crunchy French-fry style sticks made from 100% Hokkaido potatoes and Okhotsk sea salt.</p>
-          <p class="where">📍 Tanukikoji, CTS Airport shops</p>
+          <p class="where">📍 Tanukikoji Arcade, CTS Airport shops</p>
         </div>
 
         <!-- Item 4: LeTAO Double Fromage -->
@@ -1447,7 +1535,7 @@
           <h3>Cha no Ka (茶の菓)</h3>
           <p class="brand">Malebranche (マールブランシュ)</p>
           <p class="desc">Premium dark Uji matcha langue de chat cookies embossed with kanji, filled with white chocolate.</p>
-          <p class="where">📍 Kyoto Station B1 Porta or Isetan</p>
+          <p class="where">📍 Kyoto Station B1 Porta or JR Kyoto Isetan</p>
         </div>
 
         <!-- Item 7: Nama-Yatsuhashi -->
@@ -1456,7 +1544,7 @@
           <h3>Nama-Yatsuhashi (生八ツ橋)</h3>
           <p class="brand">Shogoin / Otabe</p>
           <p class="desc">Soft, chewy triangular cinnamon and matcha mochi sheets folded over sweet azuki red bean paste.</p>
-          <p class="where">📍 Kiyomizu-zaka, Kyoto Station mall</p>
+          <p class="where">📍 Kiyomizu-zaka, Kyoto Station gift mall</p>
         </div>
 
         <!-- Item 8: Aritsugu Japanese Knives -->
@@ -1464,7 +1552,7 @@
           <div class="region-tag kyoto">Kyoto</div>
           <h3>Handcrafted Chef Knives</h3>
           <p class="brand">Aritsugu (有次 - Est. 1560)</p>
-          <p class="desc">Legendary bladesmith founded 450+ years ago. They will hand-chisel your name in Japanese kanji onto the blade.</p>
+          <p class="desc">Legendary bladesmith founded 450+ years ago. They hand-chisel your name in Japanese kanji onto the blade while you wait.</p>
           <p class="where">📍 Nishiki Market, Kyoto</p>
         </div>
 
@@ -1473,8 +1561,8 @@
           <div class="region-tag kamakura">Kamakura</div>
           <h3>Hato Sablé (鳩サブレー)</h3>
           <p class="brand">Toshimaya (豊島屋 - Est. 1894)</p>
-          <p class="desc">Golden dove-shaped rich butter shortbread cookies with a century of history. Kamakura's #1 icon.</p>
-          <p class="where">📍 Toshimaya Main Store near Tsurugaoka Shrine</p>
+          <p class="desc">Golden dove-shaped rich butter shortbread cookies with over a century of history. Kamakura's #1 emblem.</p>
+          <p class="where">📍 Toshimaya Main Store on Wakamiya Oji</p>
         </div>
 
         <!-- Item 10: Kurumicco -->
@@ -1482,16 +1570,16 @@
           <div class="region-tag kamakura">Kamakura</div>
           <h3>Kurumicco (クルミッ子)</h3>
           <p class="brand">Kamakura Beniya (鎌倉紅谷)</p>
-          <p class="desc">Rich homemade salted caramel and roasted walnuts baked between delicate butter crusts. *Sells out by noon daily!*</p>
+          <p class="desc">Rich homemade salted caramel and roasted walnuts baked between delicate butter crusts. <em>Sells out by noon daily!</em></p>
           <p class="where">📍 Kamakura Beniya Main Store (Buy before 10:30 AM)</p>
         </div>
 
         <!-- Item 11: Tokyo Banana -->
         <div class="omiyage-card">
           <div class="region-tag tokyo">Tokyo / Airport</div>
-          <h3>Tokyo Banana & Sugar Butter Tree</h3>
+          <h3>Tokyo Banana &amp; Sugar Butter Tree</h3>
           <p class="brand">Grapestone</p>
-          <p class="desc">Fluffy sponge cake filled with banana custard cream (look for Pokemon editions!) and crispy sugar butter sand biscuits.</p>
+          <p class="desc">Fluffy sponge cake filled with banana custard cream (including Pokémon editions) and crispy sugar butter cereal biscuits.</p>
           <p class="where">📍 Haneda Airport Terminal 3 Duty Free</p>
         </div>
 
@@ -1500,7 +1588,7 @@
           <div class="region-tag tokyo">Tokyo / Airport</div>
           <h3>Suntory Japanese Whisky</h3>
           <p class="brand">Hibiki / Yamazaki / Hakushu</p>
-          <p class="desc">World-renowned single malts and blended whiskies. Excellent duty-free pricing.</p>
+          <p class="desc">World-renowned single malts and blended whiskies at tax-free international departure pricing.</p>
           <p class="where">📍 Haneda Airport Terminal 3 Duty Free</p>
         </div>
       </div>
@@ -1508,51 +1596,51 @@
 
     <section id="tab-reservations" class="tab-pane">
       <div class="pane-header">
-        <h2>Advance Reservations Watchlist</h2>
-        <p>Key deadlines and phone numbers for family dining and activities.</p>
+        <h2>Dining &amp; Transit Reservations Watchlist</h2>
+        <p>Priority dining venues, train seat bookings, and one-tap contact details.</p>
       </div>
 
       <div class="res-list">
         <div class="res-card urgent">
-          <span class="res-tag action">Book Today</span>
+          <span class="res-tag action">Action Required</span>
           <h3>SmartEX Nozomi Bullet Train #116</h3>
           <p><strong>Date:</strong> Sat, Oct 24 • 11:05 AM (Kyoto ➔ Shin-Yokohama)</p>
-          <p><strong>Action:</strong> Book rear-row seats with Oversized Baggage Area via the SmartEX app.</p>
+          <p><strong>Details:</strong> Reserve rear-row seats ("Seats with Oversized Baggage Area") via the SmartEX app so large suitcases stow right behind your seats.</p>
         </div>
 
         <div class="res-card urgent">
-          <span class="res-tag action">Book Today</span>
+          <span class="res-tag action">Action Required</span>
           <h3>Sagano Romantic Train (Torokko)</h3>
-          <p><strong>Date:</strong> Fri, Oct 23 (Arashiyama, Kyoto)</p>
-          <p><strong>Action:</strong> Reserve open-air Car 5 ("The Rich") online at <a href="https://www.sagano-kanko.co.jp/en/" target="_blank">sagano-kanko.co.jp</a>.</p>
+          <p><strong>Date:</strong> Fri, Oct 23 • Morning (Saga-Arashiyama)</p>
+          <p><strong>Details:</strong> Reserve open-air Car 5 ("The Rich") online at <a href="https://www.sagano-kanko.co.jp/en/" target="_blank" rel="noopener">sagano-kanko.co.jp</a>.</p>
         </div>
 
         <div class="res-card">
-          <span class="res-tag booked">Verified Open</span>
-          <h3>Hyosetsu no Mon Sapporo (氷雪の門 札幌)</h3>
-          <p><strong>Date:</strong> Tue, Oct 20 (Dinner, ~6:00 PM)</p>
-          <p><strong>Details:</strong> Historic King Crab feast in private suites. Phone: <a href="tel:+81115213046">+81 11-521-3046</a>. Address: 2-8-10 Minami 5-jo Nishi.</p>
-        </div>
-
-        <div class="res-card">
-          <span class="res-tag booked">Priority</span>
+          <span class="res-tag booked">Sapporo • Sun Oct 18</span>
           <h3>Sapporo Kani Shogun (札幌かに将軍 本店)</h3>
-          <p><strong>Date:</strong> Sun, Oct 18 (Dinner, ~5:30 PM)</p>
-          <p><strong>Details:</strong> Steamed king crab hotpot in private tatami room with chairs. Phone: <a href="tel:+81112222525">+81 11-222-2525</a>.</p>
+          <p><strong>Target Time:</strong> Dinner, ~5:30 PM (Day 3)</p>
+          <p><strong>Details:</strong> Private tatami room with chairs; steamed king crab &amp; kanisuki hotpot. Let Kumi check in at reception. Phone: <a href="tel:+81112222525">+81 11-222-2525</a>.</p>
         </div>
 
         <div class="res-card">
-          <span class="res-tag booked">Priority</span>
+          <span class="res-tag booked">Sapporo • Tue Oct 20</span>
+          <h3>Hyosetsu no Mon Sapporo (氷雪の門 札幌)</h3>
+          <p><strong>Target Time:</strong> Dinner, ~6:00 PM (Day 5 Alternate)</p>
+          <p><strong>Details:</strong> Historic King Crab banquet in private suites. Address: 2-8-10 Minami 5-jo Nishi. Phone: <a href="tel:+81115213046">+81 11-521-3046</a>.</p>
+        </div>
+
+        <div class="res-card">
+          <span class="res-tag booked">Kyoto • Fri Oct 23</span>
           <h3>Moritaya JR Kyoto Isetan 11F</h3>
-          <p><strong>Date:</strong> Fri, Oct 23 (Dinner, ~6:00 PM)</p>
-          <p><strong>Details:</strong> Kuroge Wagyu sukiyaki with Kyoto Tower window view. Phone: <a href="tel:+81753657788">+81 75-365-7788</a>.</p>
+          <p><strong>Target Time:</strong> Dinner, ~6:00 PM (Day 8)</p>
+          <p><strong>Details:</strong> Kuroge Wagyu sukiyaki overlooking Kyoto Tower; request private room &amp; well-done egg for Maria. Phone: <a href="tel:+81753657788">+81 75-365-7788</a>.</p>
         </div>
 
         <div class="res-card">
-          <span class="res-tag booked">Priority</span>
+          <span class="res-tag booked">Kamakura • Sat Oct 24</span>
           <h3>Kamakura Matsubara-an (鎌倉 松原庵)</h3>
-          <p><strong>Date:</strong> Sat, Oct 24 (Dinner, ~5:30 PM)</p>
-          <p><strong>Details:</strong> 70-year-old seaside wooden villa; duck soba & tempura. Phone: <a href="tel:+81467613838">+81 467-61-3838</a>.</p>
+          <p><strong>Target Time:</strong> Dinner, ~5:30 PM (Day 9)</p>
+          <p><strong>Details:</strong> 70-year-old seaside wooden villa near Yuigahama; handmade duck soba &amp; crispy tempura. Phone: <a href="tel:+81467613838">+81 467-61-3838</a>.</p>
         </div>
       </div>
     </section>
