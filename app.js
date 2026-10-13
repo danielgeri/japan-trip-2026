@@ -39,7 +39,8 @@ const itineraryData = [
       lunch: "Cafe BUTLERS WHARF (Inside park omurice) OR Soup Curry GARAKU (Tender braised chicken soup curry).",
       dinner: "Ebisoba Ichigen Main Store (Open Sundays! Rich shrimp miso ramen) OR Sapporo Kani Shogun (Private tatami room steamed king crab hotpot)."
     },
-    transit: "15-minute flat taxi from JR Tower hotel lobby to Shiroi Koibito Park (~￥2,500). Stroller fits in trunk."
+    transit: "15-minute flat taxi from JR Tower hotel lobby to Shiroi Koibito Park (~￥2,500). Stroller fits in trunk.",
+    additionalOptions: "🦁 <strong>Maruyama Zoo Alternate (15 min taxi):</strong> Swap morning for Sapporo Maruyama Zoo! Completely flat and stroller-friendly with a famous glass underwater tunnel where polar bears and seals swim directly overhead (plus red pandas & elephants).<br>🐑 <strong>Hitsujigaoka Sheep Hill Alternate (25 min taxi):</strong> Head to Hitsujigaoka Observation Hill to see grazing sheep on autumn hillsides, the famous Dr. Clark statue ('Boys, be ambitious!'), and fresh Hokkaido soft-serve!"
   },
   {
     day: 4,
@@ -65,7 +66,8 @@ const itineraryData = [
       lunch: "Soup Curry Suage+ (Charcoal-grilled chicken soup curry) OR Unagi Nakajima (Hitsumabushi eel at Hotel Mystays).",
       dinner: "Nemuro Hanamaru Sushi (Pull paper queue ticket at 4:15 PM on Stellar Place 6F!) OR Hyosetsu no Mon Sapporo (Historic crab feast in Susukino, Phone: 011-521-3046)."
     },
-    pregnancyTip: "Remember to pack a 2-day carry-on bag today since forwarded luggage arrives in Kyoto on Thursday, Oct 22."
+    pregnancyTip: "Remember to pack a 2-day carry-on bag today since forwarded luggage arrives in Kyoto on Thursday, Oct 22.",
+    additionalOptions: "🐑 <strong>Hitsujigaoka Sheep Hill Morning Excursion:</strong> Right after luggage drop-off at 8:30 AM, take a 25-minute taxi to Hitsujigaoka Observation Hill (9:30 AM – 11:30 AM) for Mom's sheep pasture photos & Clark statue before heading to Nakajima Park for lunch."
   },
   {
     day: 6,
@@ -220,6 +222,12 @@ function renderItinerary(filterDay) {
         ${d.transit ? `
         <div class="transit-directive">
           <strong>🚆 Transit Route:</strong> ${d.transit}
+        </div>` : ""}
+
+        ${d.additionalOptions ? `
+        <div class="options-directive">
+          <strong>🐑 Alternate / Optional Excursion:</strong>
+          <p>${d.additionalOptions}</p>
         </div>` : ""}
 
         ${d.pregnancyTip ? `

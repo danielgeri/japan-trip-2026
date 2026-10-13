@@ -368,6 +368,23 @@ body {
   color: #92400e;
 }
 
+.options-directive {
+  background: #fefce8;
+  border: 1px solid #fef08a;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  color: #713f12;
+  line-height: 1.45;
+}
+
+.options-directive strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #854d0e;
+}
+
 /* Ledger & Bookings Cards */
 .ledger-cards {
   display: flex;
