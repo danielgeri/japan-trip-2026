@@ -36,7 +36,7 @@ const itineraryData = [
     date: "Sunday, Oct 18, 2026",
     location: "Sapporo City",
     weather: "⛅ 20° / 13°C (68° / 55°F) • Sunny AM / Late PM Rain",
-    morning: "9:30 AM – 12:30 PM (Clear Sunny Window): Visit Shiroi Koibito Park (European-style chocolate factory village & mechanical clock tower; flat & stroller-friendly) OR swap in Maruyama Zoo / Hitsujigaoka Sheep Hill while skies are bright and 68°F.",
+    morning: "9:30 AM – 12:30 PM (Clear Sunny Window): Visit Shiroi Koibito Park during its annual 'Nya-Halloween' Autumn Festival (fairytale European chocolate village decked out with friendly black-cat/pumpkin displays, singing mechanical clock tower & limited-edition Halloween parfaits; 100% flat & stroller-friendly) OR swap in Maruyama Zoo / Hitsujigaoka Sheep Hill while skies are bright and 68°F.",
     afternoon: "12:45 PM – 3:00 PM (Weather-Smart Swap): Stroll Odori Park autumn foliage & ride the elevator up Sapporo TV Tower in the sunny early afternoon BEFORE late-afternoon rain showers arrive. At 3:00 PM, head underground into the climate-controlled Chi-Ka-Ho walkway & Atelier Morihiko cafe for Kayden's stroller nap.",
     evening: "5:30 PM: Private tatami room dinner in Susukino (short 5-minute taxi door-to-door so you stay dry during evening showers).",
     dining: {
@@ -45,7 +45,7 @@ const itineraryData = [
     },
     weatherStrategy: "Schedule Tweaked for Sunday Weather: Sunday starts sunny and mild (20°C / 68°F) before scattered rain arrives late afternoon. We shifted Odori Park & TV Tower up to midday (12:45–2:30 PM) so all outdoor sightseeing happens in dry sunshine, keeping you underground/indoors after 3:00 PM!",
     transit: "15-minute taxi from JR Tower Hotel lobby to Shiroi Koibito Park or Maruyama Zoo (~¥2,500). Remember: 4 adults + 1 toddler requires either a Jumbo/Van taxi (Uber XL/GO) or 2 standard cabs.",
-    additionalOptions: "🦁 <strong>Option A — Maruyama Zoo (15 min taxi):</strong> Flat woodland paths with an underwater glass tunnel where polar bears & seals swim overhead, plus red pandas & elephants.<br>🐑 <strong>Option B — Hitsujigaoka Sheep Hill (25 min taxi):</strong> Open pasture where woolly sheep graze overlooking Sapporo Dome, Dr. Clark statue, and fresh Hokkaido milk soft-serve."
+    additionalOptions: "🎃 <strong>Shiroi Koibito 'Nya-Halloween' Perks:</strong> Great day to dress Kayden in a festive Halloween shirt for courtyard pumpkin photos!<br>🦁 <strong>Option A — Maruyama Zoo (15 min taxi):</strong> Flat woodland paths with an underwater glass tunnel where polar bears & seals swim overhead, plus red pandas & elephants.<br>🐑 <strong>Option B — Hitsujigaoka Sheep Hill (25 min taxi):</strong> Open pasture where woolly sheep graze overlooking Sapporo Dome, Dr. Clark statue, and fresh Hokkaido milk soft-serve."
   },
   {
     day: 4,
@@ -76,7 +76,7 @@ const itineraryData = [
     },
     weatherStrategy: "Coolest Day Alert (13°C / 55°F): Tuesday brings a crisp northern temperature dip. Dress everyone in the full 3-layer system (Heattech + Fleece + Packable Down) and wrap Kayden in his fleece stroller blanket & beanie for the morning park/sheep hill visit, then spend the afternoon inside heated arcades and department stores.",
     pregnancyTip: "Keep your 2-day carry-on duffle bag with you tonight—your large forwarded suitcases will meet you in Kyoto on Thursday, Oct 22.",
-    additionalOptions: "🐑 <strong>Hitsujigaoka Sheep Hill Morning Window (9:30 AM – 11:30 AM):</strong> If you didn't visit on Sunday, take a 25-min taxi right after dropping your luggage at 8:30 AM to see the sheep pastures before heading to Nakajima Park."
+    additionalOptions: "🍂 <strong>Hokkaido University Golden Ginkgo Avenue (Ichō Namiki):</strong> Just a 10-minute flat walk north of your hotel at Kita-13-jo Street—a stunning 380-meter tunnel of 70 golden yellow ginkgo trees (100% flat, paved & stroller-friendly).<br>🐑 <strong>Hitsujigaoka Sheep Hill Morning Window (9:30 AM – 11:30 AM):</strong> If you didn't visit on Sunday, take a 25-min taxi right after dropping your luggage at 8:30 AM to see the sheep pastures before heading to Nakajima Park."
   },
   {
     day: 6,
@@ -105,7 +105,8 @@ const itineraryData = [
       lunch: "Hisago (Famous fluffy Oyako-don chicken & egg rice bowl; arrive at 11:15 AM opening) OR Junsei Okabeya (Simmered Yudofu tofu hotpot in a tranquil garden).",
       dinner: "Gion Tanto (Teppanyaki okonomiyaki & yakisoba beside Shirakawa Canal) OR Gion Karyo (Seasonal Kyoto Kaiseki with private room option)."
     },
-    weatherStrategy: "☀️ Crisp, sunny 72°F autumn weather! 🎉 Special Festival Note (Jidai Matsuri): Oct 22 is Kyoto's famous 'Festival of the Ages'—2,000 performers in samurai & imperial attire march from Kyoto Imperial Palace (12:00 PM) to Heian Shrine (2:30 PM). Stay in the pedestrian Higashiyama/Maruyama Park zone until 3:00 PM to avoid downtown bus/taxi road closures (or walk 10 mins north from Maruyama Park to Heian Shrine at 2:00 PM to watch the samurai procession arrive!).",
+    weatherStrategy: "☀️ Crisp, sunny 72°F autumn weather! 🎉 Festival Traffic Advisory: Oct 22 is Kyoto's Jidai Matsuri—central streets (Oike & Kawaramachi) close to buses/taxis between 11:30 AM and 3:00 PM, while your pedestrian Higashiyama & Maruyama Park route remains 100% open.",
+    additionalOptions: "⚔️ <strong>Jidai Matsuri Samurai Parade (2:00 PM – 2:30 PM at Heian Shrine):</strong> Walk 10 mins flat north from Maruyama Park along wide Jingu-michi to watch 2,000 participants dressed as samurai warriors, shoguns on horseback, and Heian nobles arrive at Heian Shrine!<br>🔥 <strong>James's Solo Night Quest — Kurama Fire Festival (Kurama-no-Hi Matsuri, 6:00 PM – 9:30 PM):</strong> Held once a year on Oct 22 up in the mountain village of Kurama (30-min Eizan Railway ride from Demachiyanagi Station). Locals carry massive 100-kg flaming pine torches through narrow village streets! <em>(Skip for Maria & Kayden due to heavy train crowds & flying sparks, but an unforgettable solo evening adventure for James after dinner!)</em>",
     pregnancyTip: "Always take a taxi up to Kiyomizu-dera's upper gate so your walking route is 100% downhill."
   },
   {
@@ -121,7 +122,8 @@ const itineraryData = [
       dinner: "Moritaya JR Kyoto Isetan 11F (Kuroge Wagyu sukiyaki overlooking Kyoto Tower; request well-done egg for Maria) OR Nishiki Warai (Kyoto Station 11F)."
     },
     weatherStrategy: "Sunny 72°F afternoon with a cool 57°F breeze in the Hozugawa river canyon—bring a light cardigan or windbreaker for the open-air Sagano Romantic Train.",
-    transit: "JR San-in Line (Platform 32/33 at Kyoto Station) is level-entry with zero steps."
+    transit: "JR San-in Line (Platform 32/33 at Kyoto Station) is level-entry with zero steps.",
+    additionalOptions: "✨ <strong>Opening Night — Kōdai-ji Temple Autumn Night Illumination (5:00 PM – 9:30 PM, ¥800):</strong> Friday Oct 23 is the official 2026 season opening night! Features a glowing bamboo forest, 3D Zen rock garden light projection, and crimson maples reflected like glass in the mirror-still <em>Garyō-ike</em> pond.<br>🚂 <strong>Toddler Bonus — Kyoto Railway Museum & SL Steam Train (Umekoji Park):</strong> Just 1 train stop (or 5-min taxi) from your Kyoto Airbnb—Kayden can ride a real puffing coal-fired Steam Locomotive (¥300, 10-min loop) and climb inside retired Shinkansen bullet trains!"
   },
   {
     day: 9,
@@ -149,7 +151,8 @@ const itineraryData = [
       lunch: "Kaikoan (Ocean-view temple cafe inside Hase-dera serving vegetarian curry & noodles) OR Woof Curry (Slow-simmered beef curry in Hase).",
       dinner: "Bills Shichirigahama (Oceanfront terrace serving ricotta hotcakes, Wagyu burgers & pasta) OR Pacific DRIVE-IN (Hawaiian-Japanese coastal plates)."
     },
-    pregnancyTip: "Skip Enoshima Island's steep cliff staircases—enjoy the panoramic ocean views effortlessly from the seated Enoden coastal train and flat beach boardwalks."
+    additionalOptions: "🕯️ <strong>Shonan Candle 2026 at Enoshima Sea Candle (5:00 PM – 9:00 PM):</strong> Over 10,000 hand-lit candles illuminate the oceanfront Samuel Cocking Botanical Garden at the end of the Enoden tram line (¥500 entry). <strong>Stair-Free Escalator Hack:</strong> Skip the island stairs by taking the <strong>Enoshima Escar (江の島エスカー, ¥360)</strong>—4 covered outdoor escalators that carry you straight up the cliff (just fold Kayden's stroller for 4 minutes on the escalator; the garden and lighthouse elevator at the top are 100% flat!).",
+    pregnancyTip: "If visiting Enoshima for the candle illumination, always use the Enoshima Escar outdoor escalators so Maria never climbs the cliff steps."
   },
   {
     day: 11,
@@ -163,7 +166,8 @@ const itineraryData = [
       lunch: "Kamakura Beniya Kurumicco (Buy boxes before 10:30 AM!) + lunch at Dankazura Kosuzu (Handmade soba & warabi mochi) OR Hachinoki (Kita-Kamakura Kaiseki).",
       dinner: "IL BIRRAIO Kamakura (Warm neighborhood Italian trattoria with fresh handmade Shonan pasta—a great toddler & family favorite) OR Ramen HANABI."
     },
-    weatherStrategy: "Mild 68°F coastal autumn day with a small chance of a brief passing sprinkle—keep a compact umbrella in the stroller basket."
+    weatherStrategy: "Mild 68°F coastal autumn day with a small chance of a brief passing sprinkle—keep a compact umbrella in the stroller basket.",
+    additionalOptions: "🕯️ <strong>Shonan Candle 2026 (Quiet Weekday Evening Option, 5:00 PM – 8:00 PM):</strong> Monday night has significantly lighter crowds than Sunday if you want to ride the Enoden tram down to Enoshima and take the stair-free <em>Enoshima Escar</em> escalator up to see the 10,000 oceanfront candles!"
   },
   {
     day: 12,
