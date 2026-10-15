@@ -90,19 +90,19 @@ const itineraryData = [
   {
     day: 6,
     date: "Wednesday, Oct 21, 2026",
-    location: "Sapporo ➔ Kyoto Arrival",
-    weather: "🌤️ 16°C Sapporo ➔ 27°C (81°F) Kyoto!",
+    location: "Sapporo (CTS) ➔ Osaka (ITM) ➔ Kyoto",
+    weather: "🌤️ 16°C Sapporo ➔ 27°C (81°F) Osaka / Kyoto!",
     morning: "10:30 AM: Relaxed checkout from JR Tower Hotel Nikko. Take the JR Rapid Airport train (37 mins) to New Chitose Airport (CTS). Enjoy ramen & buy ROYCE' / LeTAO gifts with insulated cold packs at CTS Domestic Terminal.",
-    afternoon: "3:10 PM: Japan Airlines Flight JL 2008 departs CTS for Osaka Itami (ITM), landing at 5:05 PM. Walk straight outside baggage claim to Airport Limousine Bus Stop #15 (55-minute direct highway coach to Kyoto Station).",
-    evening: "6:15 PM: Limousine Bus drops off at Kyoto Station Hachijo Exit (South Side). Walk 4 minutes on flat pavement (350m) down Muromachi-dori into KotoStay 京粋庵 2BR Private Suite (Conf: HMRQJQQTC3).",
+    afternoon: "3:10 PM: Fly Japan Airlines Flight JL 2008 from Sapporo (CTS) into Osaka Itami Airport (ITM), landing at 5:05 PM. From Osaka Itami baggage claim, walk right outside to Airport Limousine Bus Stop #15 for the direct 55-minute highway coach from Osaka straight to Kyoto Station.",
+    evening: "6:15 PM: Osaka Airport Limousine Bus drops off at Kyoto Station Hachijo Exit (South Side). Walk 4 minutes on flat pavement (350m) down Muromachi-dori into KotoStay 京粋庵 2BR Private Suite (Conf: HMRQJQQTC3).",
     dining: {
       breakfast: "<strong>Sapporo Station Bakery (Little Mermaid or Sandria)</strong> + grab extra Hokkaido milk & snacks for the airport train.",
       lunch: "<strong>New Chitose Airport (CTS Domestic 3F — World-Class Dining):</strong> 1) <strong>Hokkaido Ramen Dojo (北海道ラーメン道場)</strong> (10 famous ramen shops including Ebisoba Ichigen & Keyaki butter-corn miso ramen with open family tables); 2) <strong>Drive-In Yoshimi (ドライブインいとう)</strong> (Sweet-soy roasted pork bowls & kids plates with zero line); 3) <strong>Kantaro Gourmet Kaitenzushi (函太郎 3F)</strong> (Booth seating overlooking the runway—Kayden can watch jets take off while eating!).",
-      dinner: "<strong>Kyoto Station (4-Min Flat Walk from KotoStay):</strong> 1) <strong>Katsukura Tonkatsu (名代とんかつ かつくら The Cube 11F)</strong> (Tender pork/shrimp cutlets & barley rice; kids get a mini mortar & pestle to grind sesame seeds!); 2) <strong>Kyoto Ramen Koji (京都拉麺小路 10F)</strong> (9 famous regional ramen shops on one stroller-friendly floor); 3) <strong>Tagoto or Matsubaya (Kyoto Porta B1F)</strong> (Soothing warm Kyoto yuba/duck udon & tempura bowls); 4) <strong>Isetan B1F Depachika Takeout Feast</strong> (Bring roast wagyu bento boxes, dashimaki egg rolls & strawberries back to your private KotoStay dining table!).",
-      kidSafeOrder: "<strong>For Kayden & Maria:</strong> At Katsukura, order the <em>Hire-katsu</em> (ultra-tender lean pork tenderloin—easy for toddlers to chew), miso soup, and unlimited barley rice."
+      dinner: "<strong>Kyoto Station (4-Min Flat Walk from KotoStay — or grab 551 Horai Pork Buns at Osaka Itami Airport upon landing!):</strong> 1) <strong>Katsukura Tonkatsu (名代とんかつ かつくら The Cube 11F)</strong> (Tender pork/shrimp cutlets & barley rice; kids get a mini mortar & pestle to grind sesame seeds!); 2) <strong>Kyoto Ramen Koji (京都拉麺小路 10F)</strong> (9 famous regional ramen shops on one stroller-friendly floor); 3) <strong>Tagoto or Matsubaya (Kyoto Porta B1F)</strong> (Soothing warm Kyoto yuba/duck udon & tempura bowls); 4) <strong>Isetan B1F Depachika Takeout Feast</strong> (Bring roast wagyu bento boxes, dashimaki egg rolls & strawberries back to your private KotoStay dining table!).",
+      kidSafeOrder: "<strong>For Kayden & Maria:</strong> Grab warm <em>551 Horai Butaman</em> (Osaka's famous steamed pork buns right inside Osaka Itami arrival terminal!) for the bus ride, then at Katsukura in Kyoto order the <em>Hire-katsu</em> (ultra-tender lean pork tenderloin), miso soup, and barley rice."
     },
-    weatherStrategy: "🌡️ Huge 20°F Temperature Jump: Sapporo is a crisp 61°F (16°C), while Kyoto hits a balmy 81°F (27°C) on Wednesday! Wear a light breathable short-sleeve or cotton tee underneath your Hokkaido jacket so you can peel off all warm layers on the plane before landing in Osaka.",
-    transit: "The Itami Airport Limousine Bus stows your stroller and carry-on duffles underneath the coach—zero train transfers or station stairs!"
+    weatherStrategy: "🌡️ Huge 20°F Temperature Jump (Sapporo ➔ Osaka/Kyoto): Sapporo is a crisp 61°F (16°C), while Osaka & Kyoto hit a balmy 81°F (27°C) on Wednesday! Wear a light breathable short-sleeve or cotton tee underneath your Hokkaido jacket so you can peel off all warm layers on the plane before landing at Osaka Itami (ITM).",
+    transit: "Osaka Itami (ITM) ➔ Kyoto Transit: The Airport Limousine Bus from Osaka Itami Stop #15 (¥1,340/adult, runs every 20 mins) stows your stroller and carry-on duffles underneath the coach—taking you from Osaka Airport straight to Kyoto Station Hachijo Exit with zero train transfers or station stairs!"
   },
   {
     day: 7,
