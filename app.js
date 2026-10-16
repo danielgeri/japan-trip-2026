@@ -74,7 +74,7 @@ const itineraryData = [
     date: "Tuesday, Oct 20, 2026",
     location: "Otaru Canal Day Trip ➔ Sapporo",
     weather: "⛅ 15° / 6°C (59° / 43°F) • 100% Dry All Day!",
-    morning: "🚨 8:30 AM: Hand large suitcases to JR Tower Hotel front desk to forward via Yamato Takkyubin to your Kyoto Airbnb! 9:30 AM: Take the elevator down to Sapporo Station and board the JR Rapid Airport train (32 mins along coastal cliffs) to Minami-Otaru. Visit the twinkling Otaru Music Box Museum and stroll the flat stone Otaru Canal promenade under 100% dry skies!",
+    morning: "9:30 AM: Take the elevator down to Sapporo Station and board the JR Rapid Airport train (32 mins along coastal cliffs) to Minami-Otaru. Visit the twinkling Otaru Music Box Museum and stroll the flat stone Otaru Canal promenade under 100% dry skies!",
     afternoon: "1:30 PM – 3:30 PM: Relax at LeTAO Main Store 2F Tea Salon for Double Fromage cheesecake and hot non-caffeinated rooibos tea while Kayden stroller-naps along pedestrian-friendly Sakaimachi Street. Return to Sapporo Station by train.",
     evening: "4:15 PM: Back at Sapporo Station, pull a paper queue ticket at Nemuro Hanamaru Sushi (JR Stellar Place 6F right inside your hotel building!) OR head to Hyosetsu no Mon for a private-suite King Crab banquet.",
     dining: {
@@ -84,7 +84,7 @@ const itineraryData = [
       kidSafeOrder: "<strong>For Kayden & Maria:</strong> Naruto's crispy boneless chicken tenders + udon at lunch in Otaru; at Hanamaru/Toriton dinner, order <em>Tamago</em> (sweet omelet), <em>Inari</em> (sweet tofu pockets), <em>Ebi</em> (boiled shrimp), <em>Aburi Salmon/Beef</em> (seared/cooked), crab soup, udon, and French fries!"
     },
     weatherStrategy: "☀️ 100% Dry Otaru Window (0.0 mm Rain): Tuesday is completely dry from morning to night (15°C / 59°F)—ideal for strolling Otaru Canal and Sakaimachi Street without umbrellas! Dress in the 3-layer system (Heattech + Fleece + Packable Down) for the crisp coastal breeze.",
-    pregnancyTip: "Keep your 2-day carry-on duffle bag with you tonight—your large forwarded suitcases will meet you in Kyoto on Thursday, Oct 22.",
+    pregnancyTip: "🧳 No 2-Day Duffle Needed! Because you fly into Osaka Itami (ITM) tomorrow and take the direct Osaka–Kyoto Airport Limousine Bus, you can keep all your suitcases with you tonight and check them for FREE on JAL Flight JL 2008 tomorrow!",
     additionalOptions: "🍂 <strong>Hokkaido University Golden Ginkgo Avenue (Ichō Namiki):</strong> Just a 10-minute flat walk north of your hotel at Kita-13-jo Street—a stunning 380-meter tunnel of 70 golden yellow ginkgo trees (great quick morning stroll before Otaru or after returning at 3:30 PM!).<br>🐑 <strong>Hitsujigaoka Sheep Hill Alternative:</strong> If you prefer staying in Sapporo instead of Otaru, Tuesday's dry skies are also great for visiting the sheep pastures and Nakajima Park."
   },
   {
@@ -92,9 +92,9 @@ const itineraryData = [
     date: "Wednesday, Oct 21, 2026",
     location: "Sapporo (CTS) ➔ Osaka (ITM) ➔ Kyoto",
     weather: "🌤️ 16°C Sapporo ➔ 27°C (81°F) Osaka / Kyoto!",
-    morning: "10:30 AM: Relaxed checkout from JR Tower Hotel Nikko. Take the JR Rapid Airport train (37 mins) to New Chitose Airport (CTS). Enjoy ramen & buy ROYCE' / LeTAO gifts with insulated cold packs at CTS Domestic Terminal.",
-    afternoon: "3:10 PM: Fly Japan Airlines Flight JL 2008 from Sapporo (CTS) into Osaka Itami Airport (ITM), landing at 5:05 PM. From Osaka Itami baggage claim, walk right outside to Airport Limousine Bus Stop #15 for the direct 55-minute highway coach from Osaka straight to Kyoto Station.",
-    evening: "6:15 PM: Osaka Airport Limousine Bus drops off at Kyoto Station Hachijo Exit (South Side). Walk 4 minutes on flat pavement (350m) down Muromachi-dori into KotoStay 京粋庵 2BR Private Suite (Conf: HMRQJQQTC3).",
+    morning: "10:30 AM: Relaxed checkout from JR Tower Hotel Nikko with your suitcases. Take the direct elevator into Sapporo Station and board the JR Rapid Airport Express (reserve Car 4 'u-seat' for dedicated walk-in luggage racks, 37 mins) to New Chitose Airport (CTS). Check all suitcases for FREE at the JAL counter (20 kg / 44 lbs per person free!), then enjoy ramen & buy ROYCE' / LeTAO gifts.",
+    afternoon: "3:10 PM: Fly Japan Airlines Flight JL 2008 from Sapporo (CTS) into Osaka Itami Airport (ITM), landing at 5:05 PM. Collect your suitcases at Osaka Itami baggage claim and walk 50 feet flat outside to Airport Limousine Bus Stop #15—the bus staff load all your large suitcases under the coach for the direct 55-minute highway ride from Osaka to Kyoto Station!",
+    evening: "6:15 PM: Osaka Airport Limousine Bus drops you and your suitcases right at Kyoto Station Hachijo Exit (South Side). Roll your bags 4 minutes on flat pavement (350m) down Muromachi-dori into KotoStay 京粋庵 2BR Private Suite (Conf: HMRQJQQTC3)—and start your mid-trip laundry tonight!",
     dining: {
       breakfast: "<strong>Sapporo Station Bakery (Little Mermaid or Sandria)</strong> + grab extra Hokkaido milk & snacks for the airport train.",
       lunch: "<strong>New Chitose Airport (CTS Domestic 3F — World-Class Dining):</strong> 1) <strong>Hokkaido Ramen Dojo (北海道ラーメン道場)</strong> (10 famous ramen shops including Ebisoba Ichigen & Keyaki butter-corn miso ramen with open family tables); 2) <strong>Drive-In Yoshimi (ドライブインいとう)</strong> (Sweet-soy roasted pork bowls & kids plates with zero line); 3) <strong>Kantaro Gourmet Kaitenzushi (函太郎 3F)</strong> (Booth seating overlooking the runway—Kayden can watch jets take off while eating!).",
@@ -102,7 +102,7 @@ const itineraryData = [
       kidSafeOrder: "<strong>For Kayden & Maria:</strong> Grab warm <em>551 Horai Butaman</em> (Osaka's famous steamed pork buns right inside Osaka Itami arrival terminal!) for the bus ride, then at Katsukura in Kyoto order the <em>Hire-katsu</em> (ultra-tender lean pork tenderloin), miso soup, and barley rice."
     },
     weatherStrategy: "🌡️ Huge 20°F Temperature Jump (Sapporo ➔ Osaka/Kyoto): Sapporo is a crisp 61°F (16°C), while Osaka & Kyoto hit a balmy 81°F (27°C) on Wednesday! Wear a light breathable short-sleeve or cotton tee underneath your Hokkaido jacket so you can peel off all warm layers on the plane before landing at Osaka Itami (ITM).",
-    transit: "Osaka Itami (ITM) ➔ Kyoto Transit: The Airport Limousine Bus from Osaka Itami Stop #15 (¥1,340/adult, runs every 20 mins) stows your stroller and carry-on duffles underneath the coach—taking you from Osaka Airport straight to Kyoto Station Hachijo Exit with zero train transfers or station stairs!"
+    transit: "🧳 Why Osaka Itami (ITM) + Limousine Bus Eliminates the '2-Day Duffle' Hassle: JAL flies your suitcases to Osaka for FREE, and the Osaka Itami Limousine Bus (Stop #15, ¥1,340/adult, every 20 mins) loads all large suitcases and strollers under the bus and drops you on the exact same side of Kyoto Station as your Airbnb—zero train stairs, zero 2-day luggage wait, and all your bags arrive with you tonight!"
   },
   {
     day: 7,
@@ -111,7 +111,7 @@ const itineraryData = [
     weather: "🌤️ 22° / 13°C (72° / 55°F) • Dry PM + Jidai & Fire Fest",
     morning: "8:30 AM: Take a taxi directly to Kiyomizu-dera's upper taxi drop-off (skipping the steep uphill climb). Take in the wooden stage views and stroll gently downhill along Sannenzaka & Ninenzaka's stone lanes before crowds peak.",
     afternoon: "1:30 PM – 3:30 PM: Stroller-nap under the weeping cherry trees in flat Maruyama Park while Maria rests at Kasagiya (traditional 1914 teahouse) with warm hojicha tea & sweet red bean botamochi.",
-    evening: "4:30 PM: Stroll the lantern-lit Gion Shirakawa Canal. Your forwarded suitcases from Sapporo arrive at KotoStay today!",
+    evening: "4:30 PM: Stroll the lantern-lit Gion Shirakawa Canal before dinner in Gion or Kyoto Station.",
     dining: {
       breakfast: "<strong>Inoda Coffee or Ogawa Coffee (Kyoto Station)</strong> (Classic Kyoto morning toast sets, scrambled eggs, bacon & fruit) OR <strong>Sizuya Bakery (志津屋)</strong> (Famous <em>Katsu-sando</em> & fluffy <em>Karne</em> butter rolls).",
       lunch: "1) <strong>Okabeya (おかべ家 near Kiyomizu-dera)</strong> (Spacious 200-seat hall serving warm <em>Yudofu</em> simmered tofu hotpot, crispy vegetable tempura & rice—zero cramped counter stress!); 2) <strong>Hisago (ひさご) or Kodaiji Hashiba</strong> (Fluffy <em>Oyako-don</em> chicken & cooked egg rice bowl + warm udon at the bottom of Ninenzaka); 3) <strong>Sodoh Higashiyama Kyoto</strong> (Gorgeous garden villa serving brick-oven Margherita pizza & pasta—reserve or walk in at 11:30 AM).",
