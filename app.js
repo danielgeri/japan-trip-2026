@@ -211,38 +211,80 @@ const itineraryData = [
 // Initialize DOM
 document.addEventListener("DOMContentLoaded", () => {
   renderItinerary("all");
+  setupCollapseControls();
   setupTabs();
   setupDayFilters();
   setupChecklistPersistence();
   setupPWA();
 });
 
-// Render Itinerary Cards
+const DAY_COLLAPSE_STORAGE_KEY = "japan-trip-day-open-v1";
+
+function getSavedDayOpenState() {
+  try {
+    const raw = localStorage.getItem(DAY_COLLAPSE_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveDayOpenState(dayNum, isOpen) {
+  try {
+    const state = getSavedDayOpenState();
+    state[dayNum] = isOpen;
+    localStorage.setItem(DAY_COLLAPSE_STORAGE_KEY, JSON.stringify(state));
+  } catch (e) {
+    // Ignore storage errors in private browsing
+  }
+}
+
+// Render Itinerary Cards (Collapsible <details> / <summary>)
 function renderItinerary(filterDay) {
   const container = document.getElementById("itinerary-container");
   if (!container) return;
   container.innerHTML = "";
 
-  const filtered = filterDay === "all" 
-    ? itineraryData 
-    : itineraryData.filter(d => d.day === parseInt(filterDay, 10));
+  const savedState = getSavedDayOpenState();
+  const isSingleDay = filterDay !== "all";
+
+  const filtered = isSingleDay
+    ? itineraryData.filter(d => d.day === parseInt(filterDay, 10))
+    : itineraryData;
 
   filtered.forEach(d => {
-    const card = document.createElement("div");
-    card.className = "day-card";
+    const card = document.createElement("details");
+    card.className = "day-card" + (d.day <= 3 ? " day-card-completed" : "");
+    card.dataset.day = d.day;
+
+    // Determine initial open state:
+    // - If viewing a single filtered day, always open it
+    // - Otherwise use saved state if user has toggled it before
+    // - Default: completed Days 1–3 start collapsed, Day 4+ start open
+    const shouldBeOpen = isSingleDay
+      ? true
+      : (typeof savedState[d.day] === "boolean" ? savedState[d.day] : d.day >= 4);
+
+    if (shouldBeOpen) {
+      card.setAttribute("open", "");
+    }
+
     card.innerHTML = `
-      <div class="day-card-header">
+      <summary class="day-card-header">
         <div class="day-title-group">
           <div class="day-title-row">
             <span class="day-badge-num">Day ${d.day}</span>
             <h3>${d.date}</h3>
           </div>
         </div>
-        <div class="day-header-badges">
-          ${d.weather ? `<span class="weather-Inline-pill">${d.weather}</span>` : ""}
-          <span class="location-tag">${d.location}</span>
+        <div class="day-header-right">
+          <div class="day-header-badges">
+            ${d.weather ? `<span class="weather-Inline-pill">${d.weather}</span>` : ""}
+            <span class="location-tag">${d.location}</span>
+          </div>
+          <span class="day-collapse-icon" aria-hidden="true" title="Tap to collapse or expand">▾</span>
         </div>
-      </div>
+      </summary>
       <div class="day-card-body">
         <div class="schedule-timeline">
           <div class="time-block morning-block">
@@ -297,8 +339,39 @@ function renderItinerary(filterDay) {
         </div>` : ""}
       </div>
     `;
+
+    card.addEventListener("toggle", () => {
+      if (!isSingleDay) {
+        saveDayOpenState(d.day, card.open);
+      }
+    });
+
     container.appendChild(card);
   });
+}
+
+// Expand All / Collapse All Controls
+function setupCollapseControls() {
+  const expandAllBtn = document.getElementById("expand-all-days-btn");
+  const collapseAllBtn = document.getElementById("collapse-all-days-btn");
+
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener("click", () => {
+      document.querySelectorAll("#itinerary-container details.day-card").forEach(card => {
+        card.open = true;
+        if (card.dataset.day) saveDayOpenState(card.dataset.day, true);
+      });
+    });
+  }
+
+  if (collapseAllBtn) {
+    collapseAllBtn.addEventListener("click", () => {
+      document.querySelectorAll("#itinerary-container details.day-card").forEach(card => {
+        card.open = false;
+        if (card.dataset.day) saveDayOpenState(card.dataset.day, false);
+      });
+    });
+  }
 }
 
 // Tab Navigation

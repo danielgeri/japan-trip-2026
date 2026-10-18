@@ -338,11 +338,54 @@ body {
   border-color: var(--primary);
 }
 
-/* ==================== ITINERARY DAY CARDS ==================== */
+/* ==================== ITINERARY DAY CARDS (COLLAPSIBLE) ==================== */
+.itinerary-collapse-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.collapse-hint {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.collapse-btn-group {
+  display: flex;
+  gap: 6px;
+}
+
+.collapse-action-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.collapse-action-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary-border);
+}
+
 .itinerary-cards {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .day-card {
@@ -351,6 +394,7 @@ body {
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .day-card-header {
@@ -359,9 +403,30 @@ body {
   border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  transition: background 0.15s ease;
+}
+
+.day-card-header::-webkit-details-marker {
+  display: none;
+}
+
+.day-card-header::marker {
+  display: none;
+  content: "";
+}
+
+.day-card-header:hover {
+  background: linear-gradient(to right, #f1f5f9, #f8fafc);
+}
+
+.day-card:not([open]) .day-card-header {
+  border-bottom: none;
 }
 
 .day-title-group {
@@ -387,6 +452,10 @@ body {
   border-radius: 6px;
 }
 
+.day-card-completed .day-badge-num {
+  background: #15803d;
+}
+
 .day-title-group h3 {
   font-size: 1.05rem;
   font-weight: 800;
@@ -400,11 +469,38 @@ body {
   font-weight: 600;
 }
 
+.day-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
 .day-header-badges {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.day-collapse-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--navy-700);
+  font-size: 0.85rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background 0.15s ease;
+}
+
+.day-card:not([open]) .day-collapse-icon {
+  transform: rotate(-90deg);
 }
 
 .weather-Inline-pill {
