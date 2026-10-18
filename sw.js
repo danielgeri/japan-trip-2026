@@ -1,7 +1,9 @@
-const CACHE_NAME = 'japan-trip-2026-v25';
+const CACHE_NAME = 'japan-trip-2026-v26';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
+  './style.css?v=26',
+  './app.js?v=26',
   './style.css',
   './app.js',
   './manifest.json',
@@ -52,7 +54,7 @@ function fetchWithTimeout(request, timeoutMs = 3500) {
       reject(new Error('Network request timed out'));
     }, timeoutMs);
 
-    fetch(request).then(
+    fetch(request, { cache: 'no-cache' }).then(
       (response) => {
         clearTimeout(timer);
         resolve(response);
@@ -66,16 +68,24 @@ function fetchWithTimeout(request, timeoutMs = 3500) {
 }
 
 // Fetch Event:
-// - HTML/Navigation: Network-First (always fresh, offline fallback)
-// - CSS/JS/Images/Fonts: Stale-While-Revalidate (instant load, updates in background)
+// - HTML, CSS, JS: Network-First (always fresh when online, instant offline fallback)
+// - Images, Fonts, Icons: Stale-While-Revalidate
 self.addEventListener('fetch', (event) => {
   const request = event.request;
 
   // Only handle GET requests
   if (request.method !== 'GET') return;
 
-  // 1. Navigation / HTML requests: Network-First
-  if (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html')) {
+  const url = new URL(request.url);
+  const isCoreCode =
+    request.mode === 'navigate' ||
+    request.headers.get('accept')?.includes('text/html') ||
+    url.pathname.endsWith('.html') ||
+    url.pathname.endsWith('.js') ||
+    url.pathname.endsWith('.css');
+
+  // 1. HTML / JS / CSS requests: Network-First
+  if (isCoreCode) {
     event.respondWith(
       fetchWithTimeout(request, 3500)
         .then((networkResponse) => {
@@ -88,7 +98,7 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          return caches.match(request).then((cachedResponse) => {
+          return caches.match(request, { ignoreSearch: true }).then((cachedResponse) => {
             if (cachedResponse) return cachedResponse;
             return caches.match('./index.html');
           });
@@ -97,7 +107,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. Static Assets (CSS, JS, Fonts, Images): Stale-While-Revalidate
+  // 2. Static Media Assets (Fonts, Images, Icons): Stale-While-Revalidate
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
       const fetchPromise = fetch(request)

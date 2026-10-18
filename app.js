@@ -239,7 +239,7 @@ function saveDayOpenState(dayNum, isOpen) {
   }
 }
 
-// Render Itinerary Cards (Collapsible <details> / <summary>)
+// Render Itinerary Cards (Collapsible with .is-collapsed + aria-expanded)
 function renderItinerary(filterDay) {
   const container = document.getElementById("itinerary-container");
   if (!container) return;
@@ -253,8 +253,7 @@ function renderItinerary(filterDay) {
     : itineraryData;
 
   filtered.forEach(d => {
-    const card = document.createElement("details");
-    card.className = "day-card" + (d.day <= 3 ? " day-card-completed" : "");
+    const card = document.createElement("div");
     card.dataset.day = d.day;
 
     // Determine initial open state:
@@ -265,12 +264,12 @@ function renderItinerary(filterDay) {
       ? true
       : (typeof savedState[d.day] === "boolean" ? savedState[d.day] : d.day >= 4);
 
-    if (shouldBeOpen) {
-      card.setAttribute("open", "");
-    }
+    card.className = "day-card"
+      + (d.day <= 3 ? " day-card-completed" : "")
+      + (shouldBeOpen ? "" : " is-collapsed");
 
     card.innerHTML = `
-      <summary class="day-card-header">
+      <div class="day-card-header" role="button" tabindex="0" aria-expanded="${shouldBeOpen}">
         <div class="day-title-group">
           <div class="day-title-row">
             <span class="day-badge-num">Day ${d.day}</span>
@@ -284,7 +283,7 @@ function renderItinerary(filterDay) {
           </div>
           <span class="day-collapse-icon" aria-hidden="true" title="Tap to collapse or expand">▾</span>
         </div>
-      </summary>
+      </div>
       <div class="day-card-body">
         <div class="schedule-timeline">
           <div class="time-block morning-block">
@@ -340,11 +339,25 @@ function renderItinerary(filterDay) {
       </div>
     `;
 
-    card.addEventListener("toggle", () => {
-      if (!isSingleDay) {
-        saveDayOpenState(d.day, card.open);
-      }
-    });
+    const header = card.querySelector(".day-card-header");
+    if (header) {
+      const toggleCard = () => {
+        const nowCollapsed = card.classList.toggle("is-collapsed");
+        const isOpen = !nowCollapsed;
+        header.setAttribute("aria-expanded", String(isOpen));
+        if (!isSingleDay) {
+          saveDayOpenState(d.day, isOpen);
+        }
+      };
+
+      header.addEventListener("click", toggleCard);
+      header.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleCard();
+        }
+      });
+    }
 
     container.appendChild(card);
   });
@@ -357,8 +370,11 @@ function setupCollapseControls() {
 
   if (expandAllBtn) {
     expandAllBtn.addEventListener("click", () => {
-      document.querySelectorAll("#itinerary-container details.day-card").forEach(card => {
+      document.querySelectorAll("#itinerary-container .day-card").forEach(card => {
+        card.classList.remove("is-collapsed");
         card.open = true;
+        const header = card.querySelector(".day-card-header");
+        if (header) header.setAttribute("aria-expanded", "true");
         if (card.dataset.day) saveDayOpenState(card.dataset.day, true);
       });
     });
@@ -366,8 +382,11 @@ function setupCollapseControls() {
 
   if (collapseAllBtn) {
     collapseAllBtn.addEventListener("click", () => {
-      document.querySelectorAll("#itinerary-container details.day-card").forEach(card => {
+      document.querySelectorAll("#itinerary-container .day-card").forEach(card => {
+        card.classList.add("is-collapsed");
         card.open = false;
+        const header = card.querySelector(".day-card-header");
+        if (header) header.setAttribute("aria-expanded", "false");
         if (card.dataset.day) saveDayOpenState(card.dataset.day, false);
       });
     });

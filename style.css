@@ -425,6 +425,7 @@ body {
   background: linear-gradient(to right, #f1f5f9, #f8fafc);
 }
 
+.day-card.is-collapsed .day-card-header,
 .day-card:not([open]) .day-card-header {
   border-bottom: none;
 }
@@ -499,7 +500,7 @@ body {
   transition: transform 0.2s ease, background 0.15s ease;
 }
 
-.day-card:not([open]) .day-collapse-icon {
+.day-card.is-collapsed .day-collapse-icon {
   transform: rotate(-90deg);
 }
 
@@ -528,6 +529,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.day-card.is-collapsed .day-card-body {
+  display: none !important;
 }
 
 .schedule-timeline {
