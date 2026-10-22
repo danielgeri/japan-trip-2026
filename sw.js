@@ -1,9 +1,9 @@
-const CACHE_NAME = 'japan-trip-2026-v34';
+const CACHE_NAME = 'japan-trip-2026-v35';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
-  './style.css?v=34',
-  './app.js?v=34',
+  './style.css?v=35',
+  './app.js?v=35',
   './style.css',
   './app.js',
   './manifest.json',
